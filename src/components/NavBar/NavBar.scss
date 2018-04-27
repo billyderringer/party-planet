@@ -1,0 +1,13 @@
+@import "../shared";
+
+.ContainerNav{
+  height: 5vh;
+  background-color: $purple;
+  color: $white;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  h1 {
+    font-size: 1.2em;
+  }
+}

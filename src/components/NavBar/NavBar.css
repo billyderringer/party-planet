@@ -1,0 +1,23 @@
+html {
+  font-size: 14px; }
+
+hr {
+  margin: 0;
+  width: 50%; }
+
+.content-row {
+  height: 95vh;
+  margin: 0;
+  background-color: #f6f7fb; }
+
+.ContainerNav {
+  height: 5vh;
+  background-color: #802dc7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 45px; }
+  .ContainerNav h1 {
+    font-size: 1.2em; }
+
+/*# sourceMappingURL=NavBar.css.map */

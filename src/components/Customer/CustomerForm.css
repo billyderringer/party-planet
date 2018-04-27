@@ -1,0 +1,26 @@
+html {
+  font-size: 14px; }
+
+hr {
+  margin: 0;
+  width: 50%; }
+
+.content-row {
+  height: 95vh;
+  margin: 0;
+  background-color: #f6f7fb; }
+
+.left-col {
+  margin-top: 10px; }
+
+.right-col {
+  margin-top: 10px; }
+
+h2 {
+  margin-top: 35px;
+  font-size: 1.2em; }
+
+input {
+  margin: 5px 0; }
+
+/*# sourceMappingURL=CustomerForm.css.map */

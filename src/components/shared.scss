@@ -1,0 +1,31 @@
+
+//colors
+$white: #fff;
+$offWhite: #f6f7fb;
+$midGrey: #e6e6e6;
+$purple: #802dc7;
+$red: #ff0000;
+$green: #32bf9c;
+
+
+html{
+  font-size: 14px;
+}
+
+hr{
+  margin: 0;
+  width: 50%;
+}
+
+.content-row{
+  height: 95vh;
+  margin: 0;
+  background-color: $offWhite;
+  .left-container{
+
+  }
+
+  .right-container{
+
+  }
+}
