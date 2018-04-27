@@ -1,9 +1,11 @@
 import { createStore, combineReducers } from 'redux'
 
-import customerReducer from './customer'
+import customerReducer from './reducers/customerReducer'
+import inventoryReducer from './reducers/inventoryReducer'
 
 const reducer = combineReducers({
-    customerReducer
+    customerReducer,
+    inventoryReducer
 })
 
 const store = createStore(

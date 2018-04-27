@@ -16,7 +16,6 @@ class CustomerInfo extends Component {
             zipCode: ''
         }
         this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount() {
@@ -27,26 +26,7 @@ class CustomerInfo extends Component {
 
     handleChange = (e) => {
         this.setState({[e.target.name]:e.target.value})
-        switch (e.target.name){
-            case 'firstName':
-                return this.props.updateFirstName(e.target.value)
-            case 'lastName':
-                return this.props.updateLastName(e.target.value)
-            case 'phoneNumber':
-                return this.props.updatePhoneNumber(e.target.value)
-            case 'emailAddress':
-                return this.props.updateEmailAddress(e.target.value)
-            case 'streetAddress':
-                return this.props.updateStreetAddress(e.target.value)
-            case 'city':
-                return this.props.updateCity(e.target.value)
-            case 'usState':
-                return this.props.updateUsState(e.target.value)
-            case 'zipCode':
-                return this.props.updateZipCode(e.target.value)
-            default:
-                return
-        }
+        this.props.updateCustomerProperty(e.target.name,e.target.value)
     }
 
     loadCustomer = () => {
@@ -60,31 +40,6 @@ class CustomerInfo extends Component {
             usState,
             zipCode
         } = this.props.customers
-
-        this.setState({
-            firstName: firstName ? firstName : '',
-            lastName: lastName ? lastName : '',
-            phoneNumber: phoneNumber ? phoneNumber : '',
-            emailAddress: emailAddress ? emailAddress : '',
-            streetAddress: streetAddress ? streetAddress : '',
-            city: city ? city : '',
-            usState: usState ? usState : '',
-            zipCode: zipCode ? zipCode : ''
-        })
-    }
-
-    handleSubmit = (e) => {
-        e.preventDefault()
-        const {
-            firstName,
-            lastName,
-            phoneNumber,
-            emailAddress,
-            streetAddress,
-            city,
-            usState,
-            zipCode
-        } = this.state
 
         this.setState({
             firstName: firstName ? firstName : '',
@@ -167,36 +122,8 @@ class CustomerInfo extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        updateFirstName: (firstName) => {
-            const action = {type: 'UPDATE_FIRST_NAME', firstName}
-            dispatch(action)
-        },
-        updateLastName: (lastName) => {
-            const action = {type: 'UPDATE_LAST_NAME', lastName}
-            dispatch(action)
-        },
-        updatePhoneNumber: (phoneNumber) => {
-            const action = {type: 'UPDATE_PHONE_NUMBER', phoneNumber}
-            dispatch(action)
-        },
-        updateEmailAddress: (emailAddress) => {
-            const action = {type: 'UPDATE_EMAIL_ADDRESS', emailAddress}
-            dispatch(action)
-        },
-        updateStreetAddress: (streetAddress) => {
-            const action = {type: 'UPDATE_STREET_ADDRESS', streetAddress}
-            dispatch(action)
-        },
-        updateCity: (city) => {
-            const action = {type: 'UPDATE_CITY', city}
-            dispatch(action)
-        },
-        updateUsState: (usState) => {
-            const action = {type: 'UPDATE_US_STATE', usState}
-            dispatch(action)
-        },
-        updateZipCode: (zipCode) => {
-            const action = {type: 'UPDATE_ZIP_CODE', zipCode}
+        updateCustomerProperty:(property,value) => {
+            const action = {type: 'UPDATE_CUSTOMER_PROPERTY', property,value}
             dispatch(action)
         }
     }
