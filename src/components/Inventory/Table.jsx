@@ -19,10 +19,14 @@ class Table extends Component{
                     {
                         items.map((item,i) =>
                             <tr key={item.description+i}>
-                                <td key={item.description}>{item.description}</td>
-                                <td key={item.description+' '+i}><Counter /></td>
-                                <td key={item.available}>{item.available}</td>
-                                <td key={item.price}>{item.price}</td>
+                                <td className="description"
+                                    key={item.description}>{item.description}</td>
+                                <td className="table-counter"
+                                    key={item.description+' '+i}><Counter /></td>
+                                <td className="available"
+                                    key={item.available}>{item.available}</td>
+                                <td className="price"
+                                    key={item.price}>{item.price}</td>
                             </tr>
                         )
                     }

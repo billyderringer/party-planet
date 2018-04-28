@@ -28,6 +28,18 @@ hr {
 h3 {
   font-size: 1em; }
 
+.description {
+  width: 60%; }
+
+.table-counter {
+  width: 20%; }
+
+.available {
+  width: 10%; }
+
+.price {
+  width: 10%; }
+
 .counter .minus {
   color: #898989;
   background-color: #fff; }
