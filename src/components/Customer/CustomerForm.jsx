@@ -27,8 +27,7 @@ class CustomerInfo extends Component {
     render() {
         return (
             <form>
-                <h2>Customer Info</h2>
-                <hr />
+                <h2><strong>Customer Info</strong></h2>
                 <div className="row customer-form">
                     <div className="col-6 left-col">
                         <input type="text"

@@ -9,16 +9,13 @@ h2 {
   font-size: 1.2em; }
 
 hr {
-  margin: 0;
-  width: 50%; }
+  margin: 0; }
 
 .content-row {
-  max-height: 95vh;
+  height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
-  .content-row .left-container {
-    height: 95vh; }
 
 .ContainerNav {
   height: 5vh;

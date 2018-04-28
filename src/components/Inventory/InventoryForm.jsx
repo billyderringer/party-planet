@@ -6,7 +6,7 @@ function InventoryForm(props) {
     return (
         <div className="row inventory-row">
             <div className="col-12">
-                <h2>Inventory</h2>
+                <h2><strong>Inventory</strong></h2>
             </div>
             <div className="col-12 inventory-table">
                 <Table title="Tables" items={props.tables} />

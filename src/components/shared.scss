@@ -23,17 +23,15 @@ h2{
 
 hr{
   margin: 0;
-  width: 50%;
 }
 
 
 .content-row{
-  max-height: 95vh;
+  height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: $offWhite;
   .left-container{
-    height: 95vh;
   }
 
   .right-container{

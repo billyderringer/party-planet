@@ -7,8 +7,7 @@ class Table extends Component{
         let items = this.props.items
         return(
             <div>
-                <h3><strong>{this.props.title}</strong></h3>
-                <hr />
+                <h3>{this.props.title}</h3>
                 <table className="table">
                     <tbody>
                     <tr>
