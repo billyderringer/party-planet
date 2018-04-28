@@ -1,9 +1,27 @@
+@import "../shared.scss";
 
 .inventory-table{
   height: 45vh;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .table{
   width: 100%;
+}
+
+.counter{
+  .minus{
+    color: $darkGrey;
+    background-color: $white;
+  }
+
+  .plus{
+    color: $green;
+    background-color: $white;
+  }
+
+  h6{
+    margin: 0 10px;
+    display: inline-block;
+  }
 }

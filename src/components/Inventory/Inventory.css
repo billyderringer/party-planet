@@ -1,8 +1,31 @@
+html {
+  font-size: 14px; }
+
+hr {
+  margin: 0;
+  width: 50%; }
+
+.content-row {
+  max-height: 95vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #f6f7fb; }
+
 .inventory-table {
   height: 45vh;
-  overflow-y: auto; }
+  overflow-y: scroll; }
 
 .table {
   width: 100%; }
+
+.counter .minus {
+  color: #898989;
+  background-color: #fff; }
+.counter .plus {
+  color: #32bf9c;
+  background-color: #fff; }
+.counter h6 {
+  margin: 0 10px;
+  display: inline-block; }
 
 /*# sourceMappingURL=Inventory.css.map */

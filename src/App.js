@@ -11,7 +11,7 @@ class App extends Component {
     render() {
     return (
         <Provider store={store}>
-            <div>
+            <div className="container-main">
                 <NavBar />
                 <div className="row content-row">
                     <div className="col-6 left-container">
@@ -19,7 +19,6 @@ class App extends Component {
                         <InventoryForm />
                     </div>
                     <div className="col-6 right-container">
-
                     </div>
                 </div>
             </div>

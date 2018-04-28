@@ -1,8 +1,8 @@
-
 //colors
 $white: #fff;
 $offWhite: #f6f7fb;
 $midGrey: #e6e6e6;
+$darkGrey: #898989;
 $purple: #802dc7;
 $red: #ff0000;
 $green: #32bf9c;
@@ -17,8 +17,10 @@ hr{
   width: 50%;
 }
 
+
 .content-row{
-  height: 95vh;
+  max-height: 95vh;
+  overflow: hidden;
   margin: 0;
   background-color: $offWhite;
   .left-container{

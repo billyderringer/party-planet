@@ -6,7 +6,8 @@ hr {
   width: 50%; }
 
 .content-row {
-  height: 95vh;
+  max-height: 95vh;
+  overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
 

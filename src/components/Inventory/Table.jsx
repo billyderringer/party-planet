@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './Inventory.css'
+import Counter from "./Counter";
 
 class Table extends Component{
     render(){
@@ -20,7 +21,7 @@ class Table extends Component{
                         items.map((item,i) =>
                             <tr key={item.description+i}>
                                 <td key={item.description}>{item.description}</td>
-                                <td key={item.description+' '+i}>4</td>
+                                <td key={item.description+' '+i}><Counter /></td>
                                 <td key={item.available}>{item.available}</td>
                                 <td key={item.price}>{item.price}</td>
                             </tr>
