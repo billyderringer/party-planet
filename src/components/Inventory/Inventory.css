@@ -1,6 +1,9 @@
 html {
   font-size: 14px; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
 hr {
   margin: 0;
   width: 50%; }
@@ -10,13 +13,16 @@ hr {
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .left-container {
+    height: 95vh; }
 
-.inventory-table {
-  height: 45vh;
-  overflow-y: scroll; }
-
-.table {
-  width: 100%; }
+.inventory-row {
+  padding-bottom: 10px; }
+  .inventory-row .inventory-table {
+    height: 65vh;
+    overflow-y: scroll; }
+    .inventory-row .inventory-table .table {
+      width: 100%; }
 
 .counter .minus {
   color: #898989;

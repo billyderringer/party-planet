@@ -19,6 +19,7 @@ class App extends Component {
                         <InventoryForm />
                     </div>
                     <div className="col-6 right-container">
+                        <TestOutput />
                     </div>
                 </div>
             </div>

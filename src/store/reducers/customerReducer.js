@@ -1,5 +1,6 @@
 const initialState = {
     currentCustomer: {
+        patyName: '',
         firstName: '',
         lastName: '',
         phoneNumber: '',

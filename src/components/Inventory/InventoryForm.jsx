@@ -4,7 +4,7 @@ import Table from "./Table";
 
 function InventoryForm(props) {
     return (
-        <div className="row">
+        <div className="row inventory-row">
             <div className="col-12">
                 <h2>Inventory</h2>
             </div>

@@ -1,6 +1,9 @@
 html {
   font-size: 14px; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
 hr {
   margin: 0;
   width: 50%; }
@@ -10,6 +13,8 @@ hr {
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .left-container {
+    height: 95vh; }
 
 .ContainerNav {
   height: 5vh;
