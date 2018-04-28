@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AACA,gBAAgB;EACd,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,IAAI;;AAGlB,MAAM;EACJ,KAAK,EAAE,IAAI",
+"sources": ["Inventory.scss"],
 "names": [],
 "file": "Inventory.css"
 }

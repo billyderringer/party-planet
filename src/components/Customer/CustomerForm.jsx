@@ -18,39 +18,9 @@ class CustomerInfo extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
-    componentDidMount() {
-        if (this.props.customers) {
-            this.loadCustomer()
-        }
-    }
-
     handleChange = (e) => {
         this.setState({[e.target.name]:e.target.value})
         this.props.updateCustomerProperty(e.target.name,e.target.value)
-    }
-
-    loadCustomer = () => {
-        const {
-            firstName,
-            lastName,
-            phoneNumber,
-            emailAddress,
-            streetAddress,
-            city,
-            usState,
-            zipCode
-        } = this.props.customers
-
-        this.setState({
-            firstName: firstName ? firstName : '',
-            lastName: lastName ? lastName : '',
-            phoneNumber: phoneNumber ? phoneNumber : '',
-            emailAddress: emailAddress ? emailAddress : '',
-            streetAddress: streetAddress ? streetAddress : '',
-            city: city ? city : '',
-            usState: usState ? usState : '',
-            zipCode: zipCode ? zipCode : ''
-        })
     }
 
     render() {
@@ -123,7 +93,7 @@ class CustomerInfo extends Component {
 const mapDispatchToProps = (dispatch) => {
     return{
         updateCustomerProperty:(property,value) => {
-            const action = {type: 'UPDATE_CUSTOMER_PROPERTY', property,value}
+            const action = {type: 'UPDATE_CUSTOMER_PROPERTY', property, value}
             dispatch(action)
         }
     }
