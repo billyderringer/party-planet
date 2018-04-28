@@ -2,7 +2,11 @@ html {
   font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  padding: 5px 0; }
+
+h2 {
+  font-size: 1.2em; }
 
 hr {
   margin: 0;
@@ -19,10 +23,13 @@ hr {
 .inventory-row {
   padding-bottom: 10px; }
   .inventory-row .inventory-table {
-    height: 65vh;
+    height: 50vh;
     overflow-y: scroll; }
     .inventory-row .inventory-table .table {
       width: 100%; }
+
+h3 {
+  font-size: 1em; }
 
 .counter .minus {
   color: #898989;

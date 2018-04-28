@@ -3,12 +3,16 @@
 .inventory-row{
   padding-bottom: 10px;
   .inventory-table{
-    height: 65vh;
+    height: 50vh;
     overflow-y: scroll;
     .table{
       width: 100%;
     }
   }
+}
+
+h3{
+  font-size: 1em;
 }
 
 .counter{
