@@ -34,9 +34,13 @@ hr {
     overflow-y: auto;
     height: 30vh; }
     .cart-container .summary-left .bottom-left-cart .summary-description {
-      width: 90%; }
+      width: 85%; }
     .cart-container .summary-left .bottom-left-cart .summary-qty {
-      width: 10%; }
+      width: 15%; }
+      .cart-container .summary-left .bottom-left-cart .summary-qty .remove {
+        padding-left: 10px;
+        color: #ff0000;
+        background-color: #fff; }
   .cart-container .summary-right {
     background-color: #000; }
     .cart-container .summary-right .top-right-cart {

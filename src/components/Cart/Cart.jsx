@@ -26,31 +26,52 @@ function Cart(props) {
                             </tr>
                                     <tr>
                                         <td className="summary-description">Sample data</td>
-                                        <td className="summary-qty">4 X</td>
+                                        <td className="summary-qty">4
+                                            <i className="fa fa-times-circle remove"
+                                               aria-hidden="true" />
+                                        </td>
                                     </tr>
                             <tr>
                                 <td className="summary-description">Sample data</td>
-                                <td className="summary-qty">4 X</td>
+                                <td className="summary-qty">4
+                                    <i className="fa fa-times-circle remove"
+                                       aria-hidden="true" />
+                                </td>
                             </tr>
                             <tr>
                                 <td className="summary-description">Sample data</td>
-                                <td className="summary-qty">4 X</td>
+                                <td className="summary-qty">4
+                                    <i className="fa fa-times-circle remove"
+                                       aria-hidden="true" />
+                                </td>
                             </tr>
                             <tr>
                                 <td className="summary-description">Sample data</td>
-                                <td className="summary-qty">4 X</td>
+                                <td className="summary-qty">4
+                                    <i className="fa fa-times-circle remove"
+                                       aria-hidden="true" />
+                                </td>
                             </tr>
                             <tr>
                                 <td className="summary-description">Sample data</td>
-                                <td className="summary-qty">4 X</td>
+                                <td className="summary-qty">4
+                                    <i className="fa fa-times-circle remove"
+                                       aria-hidden="true" />
+                                </td>
                             </tr>
                             <tr>
                                 <td className="summary-description">Sample data</td>
-                                <td className="summary-qty">4 X</td>
+                                <td className="summary-qty">4
+                                    <i className="fa fa-times-circle remove"
+                                       aria-hidden="true" />
+                                </td>
                             </tr>
                             <tr>
                                 <td className="summary-description">Sample data</td>
-                                <td className="summary-qty">4 X</td>
+                                <td className="summary-qty">4
+                                    <i className="fa fa-times-circle remove"
+                                       aria-hidden="true" />
+                                </td>
                             </tr>
                             </tbody>
                         </table>

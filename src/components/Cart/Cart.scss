@@ -21,10 +21,15 @@
       overflow-y: auto;
       height: 30vh;
       .summary-description{
-        width: 90%;
+        width: 85%;
       }
       .summary-qty{
-        width: 10%;
+        width: 15%;
+        .remove{
+          padding-left: 10px;
+          color: $red;
+          background-color: $white;
+        }
       }
     }
   }
