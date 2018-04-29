@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {connect} from "react-redux"
 import './Time.css'
 
 let today = ''
@@ -8,12 +9,12 @@ class Time extends Component {
     constructor(props) {
         super(props)
         this.state={
-            out: '',
+            outDate: '',
             outTime: '',
-            return: '',
+            returnDate: '',
             returnTime: ''
         }
-
+        this.handleChange = this.handleChange.bind(this)
         this.getToday = this.getToday.bind(this)
         this.getTomorrow = this.getTomorrow.bind(this)
     }
@@ -23,6 +24,10 @@ class Time extends Component {
         this.getTomorrow()
     }
 
+    handleChange = (e) => {
+        this.setState({[e.target.name]:e.target.value})
+        this.props.updateTime(e.target.name,e.target.value)
+    }
 
     getToday = () => {
         today = new Date()
@@ -72,10 +77,14 @@ class Time extends Component {
                     <h3><strong>Out</strong></h3>
                     <input
                         type="date"
+                        name="outDate"
+                        onChange={this.handleChange}
                         defaultValue={today}
                     /><br />
                     <input
                         type="time"
+                        name="outTime"
+                        onChange={this.handleChange}
                         defaultValue="16:00:00"
                     />
                 </div>
@@ -83,10 +92,14 @@ class Time extends Component {
                     <h3><strong>In</strong></h3>
                     <input
                         type="date"
+                        name="returnDate"
+                        onChange={this.handleChange}
                         defaultValue={tomorrow}
                     /><br />
                     <input
                         type="time"
+                        name="returnTime"
+                        onChange={this.handleChange}
                         defaultValue="16:00:00"
                     />
                 </div>
@@ -95,4 +108,13 @@ class Time extends Component {
     }
 }
 
-export default Time
+const mapDispatchToProps = (dispatch) => {
+    return{
+        updateTime:(property,value) => {
+            const action = {type: 'SET_TIME', property, value}
+            dispatch(action)
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Time)
