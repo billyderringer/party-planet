@@ -1,6 +1,7 @@
 @import "../shared";
 
 .time-container{
+  display: flex;
+  align-items: center;
   height: 20vh;
-  background-color: $midGrey;
 }

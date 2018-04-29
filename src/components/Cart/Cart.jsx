@@ -10,11 +10,14 @@ function Cart(props) {
                 <div className="row">
                     <div className="col-12 top-left-cart text-center">
                         <p className="name-summary">
-                            {customer.firstName} {customer.lastName}<br />
-                            {customer.phoneNumber}<br />
-                            {customer.emailAddress}<br />
-                            {customer.streetAddress}<br />
-                            {customer.city} {customer.usState} {customer.zipCode}
+                            {customer.firstName || customer.lastName ?
+                                customer.firstName + ' ' + customer.lastName : 'Name'}<br />
+                            {customer.phoneNumber ? customer.phoneNumber : 'Phone Number'}<br />
+                            {customer.emailAddress ? customer.emailAddress : 'Email'}<br />
+                            {customer.streetAddress ? customer.streetAddress : 'Street Address'}<br />
+                            {customer.city ? customer.city : 'City'}
+                            {customer.usState ? customer.usState : 'State'}
+                            {customer.zipCode ? customer.zipCode : 'Zip'}
                         </p>
                     </div>
                     <div className="col-12 bottom-left-cart">

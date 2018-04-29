@@ -25,10 +25,12 @@ hr {
   .cart-container .summary-left .top-left-cart {
     background-color: #000;
     color: #fff;
-    height: 17vh; }
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .cart-container .summary-left .top-left-cart .name-summary {
-      font-size: 1em;
-      padding: 5px 0; }
+      font-size: 1em; }
   .cart-container .summary-left .bottom-left-cart {
     margin-top: 5px;
     overflow-y: auto;

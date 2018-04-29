@@ -11,9 +11,11 @@
       background-color: $black;
       color: $white;
       height: 17vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       .name-summary{
         font-size: 1em;
-        padding: 5px 0;
       }
     }
     .bottom-left-cart{
