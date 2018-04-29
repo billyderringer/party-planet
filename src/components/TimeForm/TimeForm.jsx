@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux"
-import './Time.css'
+import './TimeForm.css'
 
 let today = ''
 let tomorrow = ''
 
-class Time extends Component {
+class TimeForm extends Component {
     constructor(props) {
         super(props)
         this.state={
@@ -45,7 +45,7 @@ class Time extends Component {
 
         today = yyyy + '-' + mm + '-' + dd
         this.setState({
-            out: today
+            outDate: today
         })
     }
 
@@ -65,7 +65,7 @@ class Time extends Component {
 
         tomorrow = yyyy + '-' + mm + '-' + dd
         this.setState({
-            return: tomorrow
+            returnDate: tomorrow
         })
     }
 
@@ -117,4 +117,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Time)
+export default connect(null, mapDispatchToProps)(TimeForm)
