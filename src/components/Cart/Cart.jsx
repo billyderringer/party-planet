@@ -6,7 +6,7 @@ function Cart(props) {
     const {customer}=props
     return (
         <div className="row cart-container">
-            <div className="col-6 summary-left">
+            <div className="col-7 summary-left">
                 <div className="row">
                     <div className="col-12 top-left-cart text-center">
                         <p className="name-summary">
@@ -18,12 +18,54 @@ function Cart(props) {
                         </p>
                     </div>
                     <div className="col-12 bottom-left-cart">
-                        this is a test
+                        <table className="table">
+                            <tbody>
+                            <tr>
+                                <th>Description</th>
+                                <th>Qty</th>
+                            </tr>
+                                    <tr>
+                                        <td className="summary-description">Sample data</td>
+                                        <td className="summary-qty">4 X</td>
+                                    </tr>
+                            <tr>
+                                <td className="summary-description">Sample data</td>
+                                <td className="summary-qty">4 X</td>
+                            </tr>
+                            <tr>
+                                <td className="summary-description">Sample data</td>
+                                <td className="summary-qty">4 X</td>
+                            </tr>
+                            <tr>
+                                <td className="summary-description">Sample data</td>
+                                <td className="summary-qty">4 X</td>
+                            </tr>
+                            <tr>
+                                <td className="summary-description">Sample data</td>
+                                <td className="summary-qty">4 X</td>
+                            </tr>
+                            <tr>
+                                <td className="summary-description">Sample data</td>
+                                <td className="summary-qty">4 X</td>
+                            </tr>
+                            <tr>
+                                <td className="summary-description">Sample data</td>
+                                <td className="summary-qty">4 X</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div className="col-6 summary-right">
+            <div className="col-5 summary-right">
+                <div className="row">
+                    <div className="col-12 top-right-cart text-center">
+                        CART
+                    </div>
+                    <div className="col-12 bottom-right-cart">
 
+                    </div>
+                </div>
             </div>
         </div>
     )

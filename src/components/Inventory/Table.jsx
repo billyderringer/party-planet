@@ -32,7 +32,6 @@ class Table extends Component{
                     }
 
                     </tbody>
-
                 </table>
             </div>
         )

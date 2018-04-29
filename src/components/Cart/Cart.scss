@@ -2,18 +2,38 @@
 
 .cart-container{
   height: 50vh;
-  padding: 0 5px;
+  padding-right: 5px;
   .summary-left{
+    .row{
+      padding: 0 5px;
+    }
     .top-left-cart{
       background-color: $black;
       color: $white;
+      height: 17vh;
       .name-summary{
         font-size: 1em;
         padding: 5px 0;
       }
     }
+    .bottom-left-cart{
+      margin-top: 5px;
+      overflow-y: auto;
+      height: 30vh;
+      .summary-description{
+        width: 90%;
+      }
+      .summary-qty{
+        width: 10%;
+      }
+    }
   }
   .summary-right{
-
+    background-color: $black;
+    .top-right-cart{
+      padding: 15px 0;
+      color: $white;
+      background-color: $green;
+    }
   }
 }
