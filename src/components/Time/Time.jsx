@@ -6,7 +6,13 @@ let tomorrow = ''
 
 class Time extends Component {
     constructor(props) {
-        super(props);
+        super(props)
+        this.state={
+            out: '',
+            outTime: '',
+            return: '',
+            returnTime: ''
+        }
 
         this.getToday = this.getToday.bind(this)
         this.getTomorrow = this.getTomorrow.bind(this)
@@ -32,7 +38,10 @@ class Time extends Component {
             mm = '0'+mm
         }
 
-        today = yyyy + '-' + mm + '-' + dd;
+        today = yyyy + '-' + mm + '-' + dd
+        this.setState({
+            out: today
+        })
     }
 
     getTomorrow = () => {
@@ -49,7 +58,10 @@ class Time extends Component {
             mm = '0'+mm
         }
 
-        tomorrow = yyyy + '-' + mm + '-' + dd;
+        tomorrow = yyyy + '-' + mm + '-' + dd
+        this.setState({
+            return: tomorrow
+        })
     }
 
     render() {
