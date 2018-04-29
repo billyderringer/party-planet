@@ -1,7 +1,7 @@
 html {
   font-size: 14px; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 5px 0; }
 
@@ -19,6 +19,12 @@ hr {
 
 .cart-container {
   height: 50vh;
-  background-color: #898989; }
+  padding: 0 5px; }
+  .cart-container .summary-left .top-left-cart {
+    background-color: #000;
+    color: #fff; }
+    .cart-container .summary-left .top-left-cart .name-summary {
+      font-size: 1em;
+      padding: 5px 0; }
 
 /*# sourceMappingURL=Cart.css.map */

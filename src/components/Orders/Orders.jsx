@@ -4,7 +4,7 @@ import './Orders.css'
 class Orders extends Component {
     render() {
         return (
-            <div className="orders-container">
+            <div className="row orders-container">
 
             </div>
         )

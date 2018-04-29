@@ -2,5 +2,18 @@
 
 .cart-container{
   height: 50vh;
-  background-color: $darkGrey;
+  padding: 0 5px;
+  .summary-left{
+    .top-left-cart{
+      background-color: $black;
+      color: $white;
+      .name-summary{
+        font-size: 1em;
+        padding: 5px 0;
+      }
+    }
+  }
+  .summary-right{
+
+  }
 }

@@ -6,7 +6,6 @@ class CustomerInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            partyName: '',
             firstName: '',
             lastName: '',
             phoneNumber: '',
@@ -30,12 +29,6 @@ class CustomerInfo extends Component {
                 <h2><strong>Customer Info</strong></h2>
                 <div className="row customer-form">
                     <div className="col-6 left-col">
-                        <input type="text"
-                               name="partyName"
-                               onChange={this.handleChange}
-                               value={this.state.partyName}
-                               className="form-control"
-                               placeholder="Party Name" />
                         <input type="text"
                                name="firstName"
                                onChange={this.handleChange}

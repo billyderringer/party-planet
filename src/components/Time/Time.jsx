@@ -4,7 +4,7 @@ import './Time.css'
 class Time extends Component {
     render() {
         return (
-            <div className="time-container">
+            <div className="row time-container">
 
             </div>
         )
