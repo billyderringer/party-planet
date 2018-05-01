@@ -50,9 +50,12 @@ class TimeForm extends Component {
     }
 
     getTomorrow = () => {
-        tomorrow = new Date()
-        let dd = tomorrow.getDate()+1
+        let day = new Date()
+        tomorrow = new Date(day)
+        tomorrow.setDate(day.getDate()+1)
+        let dd = tomorrow.getDate()
         let mm = tomorrow.getMonth()+1
+
         let yyyy = tomorrow.getFullYear()
 
         if(dd<10) {
@@ -78,12 +81,14 @@ class TimeForm extends Component {
                     <input
                         type="date"
                         name="outDate"
+                        className="form-control form-control-sm"
                         onChange={this.handleChange}
                         defaultValue={today}
                     /><br />
                     <input
                         type="time"
                         name="outTime"
+                        className="form-control form-control-sm"
                         onChange={this.handleChange}
                         defaultValue="16:00:00"
                     />
@@ -93,12 +98,14 @@ class TimeForm extends Component {
                     <input
                         type="date"
                         name="returnDate"
+                        className="form-control form-control-sm"
                         onChange={this.handleChange}
                         defaultValue={tomorrow}
                     /><br />
                     <input
                         type="time"
                         name="returnTime"
+                        className="form-control form-control-sm"
                         onChange={this.handleChange}
                         defaultValue="16:00:00"
                     />

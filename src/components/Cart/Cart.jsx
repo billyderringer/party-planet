@@ -11,12 +11,12 @@ function Cart(props) {
                     <div className="col-12 top-left-cart text-center">
                         <p className="name-summary">
                             {customer.firstName || customer.lastName ?
-                                customer.firstName + ' ' + customer.lastName : 'Name'}<br />
+                                customer.firstName + '  ' + customer.lastName : 'Name'}<br />
                             {customer.phoneNumber ? customer.phoneNumber : 'Phone Number'}<br />
                             {customer.emailAddress ? customer.emailAddress : 'Email'}<br />
                             {customer.streetAddress ? customer.streetAddress : 'Street Address'}<br />
-                            {customer.city ? customer.city : 'City'}
-                            {customer.usState ? customer.usState : 'State'}
+                            {customer.city ? customer.city : 'City'}&nbsp;
+                            {customer.usState ? customer.usState : 'State'}&nbsp;
                             {customer.zipCode ? customer.zipCode : 'Zip'}
                         </p>
                     </div>

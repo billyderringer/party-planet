@@ -41,13 +41,11 @@ h3 {
   width: 10%; }
 
 .counter .minus {
-  color: #898989;
-  background-color: #fff; }
+  color: #898989; }
 .counter .plus {
-  color: #32bf9c;
-  background-color: #fff; }
+  color: #32bf9c; }
 .counter h6 {
-  margin: 0 10px;
+  margin: 0 20px;
   display: inline-block; }
 
 /*# sourceMappingURL=Inventory.css.map */

@@ -6,6 +6,7 @@ const constants = {
 
     //inventory
     SET_INVENTORY_COUNT: 'SET_INVENTORY_COUNT',
+    UPDATE_NEEDED_PROPERTY: 'UPDATE_NEEDED_PROPERTY',
 
     //time
     SET_TIME: 'SET_TIME'

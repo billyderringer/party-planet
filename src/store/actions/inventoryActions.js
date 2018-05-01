@@ -1,10 +1,8 @@
 import constants from './constants'
 
 const actions = {
-    setInventoryCount: (inventoryCount) => {
-        return {
-            type: constants.SET_INVENTORY_COUNT, inventoryCount
-        }
+    updateCounterProperty: (identity,position,count) => {
+        return { type: constants.UPDATE_NEEDED_PROPERTY, identity,position,count }
     }
 }
 

@@ -9,10 +9,10 @@ function InventoryForm(props) {
                 <h2><strong>Inventory</strong></h2>
             </div>
             <div className="col-12 inventory-table">
-                <Table title="Tables" items={props.tables} />
-                <Table title="Chairs" items={props.chairs} />
-                <Table title="Bounce Houses" items={props.bounce} />
-                <Table title="Misc." items={props.misc} />
+                <Table title="Tables" identity="tables" items={props.tables} />
+                <Table title="Chairs" identity="chairs"  items={props.chairs} />
+                <Table title="Bounce Houses" identity="bounce"  items={props.bounce} />
+                <Table title="Misc." identity="misc"  items={props.misc} />
             </div>
         </div>
     )

@@ -1,12 +1,20 @@
 import React, {Component} from 'react'
 import './Inventory.css'
-import Counter from "./Counter";
+import Counter from "./Counter"
 
 class Table extends Component{
+    constructor(props) {
+        super(props)
+        this.state={
+            currentCount: 0
+        }
+    }
+
     render(){
         let items = this.props.items
         return(
             <div>
+                {console.log(items)}
                 <h3>{this.props.title}</h3>
                 <table className="table">
                     <tbody>
@@ -22,7 +30,14 @@ class Table extends Component{
                                 <td className="description"
                                     key={item.description}>{item.description}</td>
                                 <td className="table-counter"
-                                    key={item.description+' '+i}><Counter /></td>
+                                    onChange={this.handleChange}
+                                    key={item.description+' '+i}>
+                                    <Counter
+                                        identity={this.props.identity}
+                                        position={i}
+                                        item={item.needed}
+                                    />
+                                </td>
                                 <td className="available"
                                     key={item.available}>{item.available}</td>
                                 <td className="price"
@@ -30,7 +45,6 @@ class Table extends Component{
                             </tr>
                         )
                     }
-
                     </tbody>
                 </table>
             </div>

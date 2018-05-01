@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import './CustomerForm.css'
 
-class CustomerInfo extends Component {
+class CustomerForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,25 +33,25 @@ class CustomerInfo extends Component {
                                name="firstName"
                                onChange={this.handleChange}
                                value={this.state.firstName}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="First Name" />
                         <input type="text"
                                name="lastName"
                                onChange={this.handleChange}
                                value={this.state.lastName}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="Last Name" />
                         <input type="tel"
                                name="phoneNumber"
                                onChange={this.handleChange}
                                value={this.state.phoneNumber}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="Phone" />
                         <input type="email"
                                name="emailAddress"
                                onChange={this.handleChange}
                                value={this.state.emailAddress}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="Email" />
 
                      </div>
@@ -60,25 +60,25 @@ class CustomerInfo extends Component {
                                name="streetAddress"
                                onChange={this.handleChange}
                                value={this.state.streetAddress}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="Street Address" />
                         <input type="text"
                                name="city"
                                onChange={this.handleChange}
                                value={this.state.city}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="City" />
                         <input type="text"
                                name="usState"
                                onChange={this.handleChange}
                                value={this.state.usState}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                placeholder="State" />
                         <input type="text"
                                name="zipCode"
                                onChange={this.handleChange}
                                value={this.state.zipCode}
-                               className="form-control"
+                               className="form-control form-control-sm"
                                pattern="[0-9]{5}"
                                placeholder="Zip Code" />
                     </div>
@@ -97,4 +97,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps) (CustomerInfo)
+export default connect(null, mapDispatchToProps) (CustomerForm)
