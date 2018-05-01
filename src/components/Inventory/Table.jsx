@@ -14,7 +14,6 @@ class Table extends Component{
         let items = this.props.items
         return(
             <div>
-                {console.log(items)}
                 <h3>{this.props.title}</h3>
                 <table className="table">
                     <tbody>
