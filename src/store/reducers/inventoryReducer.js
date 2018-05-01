@@ -92,12 +92,10 @@ const reducer = (state = initialState, action) => {
     switch(action.type) {
         case 'UPDATE_NEEDED_PROPERTY':
             const id = action.identity
-            const position = action.position
-            const count = action.count
-            const tables = state.tables.map((item,i) => {
+            const inventory = state[id].map((item,i) => {
                 if(i === action.position){
                     return {
-                        ...(state.tables[i]),
+                        ...(state[id][i]),
                         needed:action.count
                     }
                 }
@@ -106,7 +104,7 @@ const reducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                tables
+                [id]:inventory
             }
         default:
             return state
