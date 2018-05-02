@@ -11,7 +11,6 @@ class Table extends Component{
     }
 
     render(){
-        let items = this.props.items
         return(
             <div>
                 <h3>{this.props.title}</h3>
@@ -24,7 +23,7 @@ class Table extends Component{
                         <th>Price</th>
                     </tr>
                     {
-                        items.map((item,i) =>
+                        this.props.items.map((item,i) =>
                             <tr key={item.description+i}>
                                 <td className="description"
                                     key={item.description}>{item.description}</td>
@@ -34,11 +33,19 @@ class Table extends Component{
                                     <Counter
                                         identity={this.props.identity}
                                         position={i}
-                                        item={item.needed}
+                                        //shows items needed in counter
+                                        currentAvailable={item.available === item.needed ?
+                                            0: item.available - item.needed}
+                                        count={item.needed > item.available ?
+                                            item.available : item.needed}
                                     />
                                 </td>
                                 <td className="available"
-                                    key={item.available}>{item.available}</td>
+                                    key={item.available}
+                                    onChange={this.handleSessionAvailability}
+                                >
+                                    {item.available === item.needed ?
+                                        0: item.available - item.needed}</td>
                                 <td className="price"
                                     key={item.price}>{item.price}</td>
                             </tr>
