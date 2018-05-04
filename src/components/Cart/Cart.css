@@ -36,10 +36,12 @@ hr {
     overflow-y: auto;
     height: 30vh; }
     .cart-container .summary-left .bottom-left-cart .summary-description {
-      width: 75%; }
+      width: 80%; }
     .cart-container .summary-left .bottom-left-cart .summary-qty {
-      width: 25%; }
-      .cart-container .summary-left .bottom-left-cart .summary-qty .remove {
+      width: 10%; }
+    .cart-container .summary-left .bottom-left-cart .summary-remove {
+      width: 10%; }
+      .cart-container .summary-left .bottom-left-cart .summary-remove .remove {
         padding-left: 10px;
         color: #ff0000;
         background-color: #fff; }
