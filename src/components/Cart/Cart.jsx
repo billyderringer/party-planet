@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import './Cart.css'
+import InventoryList from './InventoryList'
 
 function Cart(props) {
     const {customer} = props
@@ -27,98 +28,10 @@ function Cart(props) {
                                 <th>Description</th>
                                 <th>Qty</th>
                             </tr>
-                            {
-                                props.tables
-                                    .filter(item => item.needed > 0)
-                                    .map(item =>
-                                        <tr key={item.description + '_row'}>
-                                            <td className="summary-description"
-                                                key={item.description}
-                                            >{item.description}</td>
-                                            <td className="summary-qty"
-                                                key={item.description + '_' + item.description.needed}
-                                            >{item.needed}
-                                            </td>
-                                            <td className="summary-remove"
-                                                key={item.description + '_icon_container'}
-                                            >
-                                                <i className="fa fa-times-circle remove"
-                                                   key={item.description + '_icon'}
-                                                   aria-hidden="true"
-                                                />
-                                            </td>
-                                        </tr>
-                                    )
-                            }
-                            {
-                                props.chairs
-                                    .filter(item => item.needed > 0)
-                                    .map(item =>
-                                        <tr key={item.description + '_row'}>
-                                            <td className="summary-description"
-                                                key={item.description}
-                                            >{item.description}</td>
-                                            <td className="summary-qty"
-                                                key={item.description + '_' + item.description.needed}
-                                            >{item.needed}
-                                            </td>
-                                            <td className="summary-remove"
-                                                key={item.description + '_icon_container'}
-                                            >
-                                                <i className="fa fa-times-circle remove"
-                                                   key={item.description + '_icon'}
-                                                   aria-hidden="true"
-                                                />
-                                            </td>
-                                        </tr>
-                                    )
-                            }
-                            {
-                                props.bounce
-                                    .filter(item => item.needed > 0)
-                                    .map(item =>
-                                        <tr key={item.description + '_row'}>
-                                            <td className="summary-description"
-                                                key={item.description}
-                                            >{item.description}</td>
-                                            <td className="summary-qty"
-                                                key={item.description + '_' + item.description.needed}
-                                            >{item.needed}
-                                            </td>
-                                            <td className="summary-remove"
-                                                key={item.description + '_icon_container'}
-                                            >
-                                                <i className="fa fa-times-circle remove"
-                                                   key={item.description + '_icon'}
-                                                   aria-hidden="true"
-                                                />
-                                            </td>
-                                        </tr>
-                                    )
-                            }
-                            {
-                                props.misc
-                                    .filter(item => item.needed > 0)
-                                    .map(item =>
-                                        <tr key={item.description + '_row'}>
-                                            <td className="summary-description"
-                                                key={item.description}
-                                            >{item.description}</td>
-                                            <td className="summary-qty"
-                                                key={item.description + '_' + item.description.needed}
-                                            >{item.needed}
-                                            </td>
-                                            <td className="summary-remove"
-                                                key={item.description + '_icon_container'}
-                                            >
-                                                <i className="fa fa-times-circle remove"
-                                                   key={item.description + '_icon'}
-                                                   aria-hidden="true"
-                                                />
-                                            </td>
-                                        </tr>
-                                    )
-                            }
+                            <InventoryList items={props.tables} />
+                            <InventoryList items={props.chairs} />
+                            <InventoryList items={props.bounce} />
+                            <InventoryList items={props.misc} />
                             </tbody>
                         </table>
                     </div>

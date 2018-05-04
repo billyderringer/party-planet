@@ -42,6 +42,8 @@ h3 {
 
 .counter button {
   padding: 0 5px; }
+  .counter button:hover {
+    cursor: pointer; }
 .counter .minus {
   color: #898989; }
 .counter .plus {
