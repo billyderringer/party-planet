@@ -80,21 +80,21 @@ const initialState = {
         {
             description:'Frozen Drink - Double',
             needed:0,
-            currentAvailable:8,
+            currentAvailable:20,
             available:20,
             price:50.00
         },
         {
             description:'Popcorn Machine - Tabletop',
             needed:0,
-            currentAvailable:8,
+            currentAvailable:10,
             available:10,
             price:27.00
         },
         {
             description:'Popcorn Machine - Wheeled',
             needed:0,
-            currentAvailable:8,
+            currentAvailable:10,
             available:10,
             price:35.00
         }
