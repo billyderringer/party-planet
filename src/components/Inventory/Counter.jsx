@@ -13,33 +13,34 @@ class Counter extends Component {
     }
 
     handlePlus = () => {
-        this.setState({
-            currentCount: this.state.currentCount + 1
-        })
+        const needed = this.props.needed + 1
+        const available = this.props.available
+        const countNeeded =  needed < available ? needed : available
+        const currentAvailable =
+            needed < available ?
+                available - needed :
+                0
         this.props.updateCounterProperty(
             this.props.identity,
             this.props.position,
-            this.state.currentCount + 1,
-            this.props.currentAvailable - 1
+            countNeeded,
+            currentAvailable
         )
     }
 
-
     handleMinus = () => {
-        const countResult =  this.state.currentCount > 0 ? this.state.currentCount - 1 : 0
-        const availableResult =  this.state.currentAvailable > 0 ? this.state.currentAvailable + 1 : 0
-        this.state.currentCount > 0 ?
-            this.setState({
-                currentCount: this.state.currentCount - 1
-            }):
-            this.setState({
-                currentCount: 0
-            })
+        const needed = this.props.needed - 1
+        const available = this.props.available
+        //ensures count does not go below 0
+        const countNeeded =  needed > 0 ? needed : 0
+        const currentAvailable =
+            available > countNeeded ?
+                available - countNeeded : available
         this.props.updateCounterProperty(
             this.props.identity,
             this.props.position,
-            countResult,
-            availableResult
+            countNeeded,
+            currentAvailable
         )
     }
 
@@ -48,16 +49,14 @@ class Counter extends Component {
             <div className="counter">
                <button
                     onClick={this.handleMinus}
-                    value={this.state.currentCount}
-                    onChange={this.handleChange}
                >
                    <i className="fa fa-chevron-circle-down minus"
                       aria-hidden="true"
                       />
                </button>
-                <h6
-                    id="valueHolder"
-                    onChange={this.handleChange}>{this.props.count}</h6>
+                <h6 id="valueHolder">
+                    {this.props.needed}
+                </h6>
                 <button
                     onClick={this.handlePlus} >
                     <i className="fa fa-chevron-circle-up plus"

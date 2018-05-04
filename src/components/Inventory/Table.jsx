@@ -28,21 +28,16 @@ class Table extends Component{
                                 <td className="description"
                                     key={item.description}>{item.description}</td>
                                 <td className="table-counter"
-                                    onChange={this.handleChange}
                                     key={item.description+' '+i}>
                                     <Counter
                                         identity={this.props.identity}
                                         position={i}
-                                        //shows items needed in counter
-                                        currentAvailable={item.available === item.needed ?
-                                            0: item.available - item.needed}
-                                        count={item.needed > item.available ?
-                                            item.available : item.needed}
+                                        needed={item.needed}
+                                        available={item.available}
                                     />
                                 </td>
                                 <td className="available"
                                     key={item.available}
-                                    onChange={this.handleSessionAvailability}
                                 >
                                     {item.available === item.needed ?
                                         0: item.available - item.needed}</td>
