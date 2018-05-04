@@ -50,7 +50,7 @@ class Counter extends Component {
                <button
                     onClick={this.handleMinus}
                >
-                   <i className="fa fa-chevron-circle-down minus"
+                   <i className="fa fa-minus minus"
                       aria-hidden="true"
                       />
                </button>
@@ -59,7 +59,7 @@ class Counter extends Component {
                 </h6>
                 <button
                     onClick={this.handlePlus} >
-                    <i className="fa fa-chevron-circle-up plus"
+                    <i className="fa fa-plus plus"
                        aria-hidden="true"
                       />
                 </button>

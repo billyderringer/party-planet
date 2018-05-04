@@ -40,6 +40,8 @@ h3 {
 .price {
   width: 10%; }
 
+.counter button {
+  padding: 0 5px; }
 .counter .minus {
   color: #898989; }
 .counter .plus {

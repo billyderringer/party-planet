@@ -107,7 +107,7 @@ class TimeForm extends Component {
                         name="returnTime"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue="16:00:00"
+                        defaultValue="15:59:00"
                     />
                 </div>
             </div>
