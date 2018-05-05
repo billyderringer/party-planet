@@ -3,13 +3,6 @@ import './Inventory.css'
 import Counter from "./Counter"
 
 class Table extends Component{
-    constructor(props) {
-        super(props)
-        this.state={
-            currentCount: 0
-        }
-    }
-
     render(){
         return(
             <div>
@@ -42,7 +35,7 @@ class Table extends Component{
                                     {item.available === item.needed ?
                                         0: item.available - item.needed}</td>
                                 <td className="price"
-                                    key={item.price}>{item.price}</td>
+                                    key={item.price}>{parseFloat(item.price).toFixed(2)}</td>
                             </tr>
                         )
                     }

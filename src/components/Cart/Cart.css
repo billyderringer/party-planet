@@ -43,8 +43,7 @@ hr {
       width: 10%; }
       .cart-container .summary-left .bottom-left-cart .summary-remove .remove {
         padding-left: 10px;
-        color: #ff0000;
-        background-color: #fff; }
+        color: #ff0000; }
   .cart-container .summary-right {
     background-color: #000; }
     .cart-container .summary-right .top-right-cart {
