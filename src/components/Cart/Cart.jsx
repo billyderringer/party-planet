@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import './Cart.css'
 import InventoryList from './InventoryList'
 import DateSummary from "./DateSummary";
+import CostSummary from "./CostSummary";
+import ButtonRow from './ButtonRow'
 
 function Cart(props) {
     const {customer} = props
@@ -45,6 +47,8 @@ function Cart(props) {
                     </div>
                     <div className="col-12 bottom-right-cart">
                         <DateSummary time={props.time} />
+                        <CostSummary time={props.time} />
+                        <ButtonRow />
                     </div>
                 </div>
             </div>
