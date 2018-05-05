@@ -29,7 +29,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .cart-container .summary-left .top-left-cart .name-summary {
+    .cart-container .summary-left .top-left-cart .customer-summary {
       font-size: 1em; }
   .cart-container .summary-left .bottom-left-cart {
     margin-top: 5px;

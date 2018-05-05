@@ -10,7 +10,7 @@ function Cart(props) {
             <div className="col-7 summary-left">
                 <div className="row">
                     <div className="col-12 top-left-cart text-center">
-                        <p className="name-summary">
+                        <p className="customer-summary">
                             {customer.firstName || customer.lastName ?
                                 customer.firstName + '  ' + customer.lastName : 'Name'}<br/>
                             {customer.phoneNumber ? customer.phoneNumber : 'Phone Number'}<br/>
