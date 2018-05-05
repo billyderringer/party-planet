@@ -48,21 +48,20 @@ hr {
     background-color: #000;
     color: #fff; }
     .cart-container .summary-right .top-right-cart {
-      padding: 25px 0;
-      background-color: #32bf9c;
-      font-size: 1.5em; }
+      padding: 10px 0;
+      background-color: #32bf9c; }
     .cart-container .summary-right .bottom-right-cart {
       padding: 20px 20px 0; }
       .cart-container .summary-right .bottom-right-cart hr {
         width: 96%;
-        margin: 20px 0 20px 2%;
+        margin: 5px 0 5px 2%;
         background-color: #898989; }
       .cart-container .summary-right .bottom-right-cart .current-out {
         float: right; }
       .cart-container .summary-right .bottom-right-cart .current-in {
         float: right; }
       .cart-container .summary-right .bottom-right-cart .total-row {
-        font-size: 1.5em; }
+        font-size: 1.2em; }
       .cart-container .summary-right .bottom-right-cart .btn-row {
         display: flex;
         justify-content: center;
@@ -71,7 +70,7 @@ hr {
           color: #fff;
           border: none;
           border-radius: 4px;
-          padding: 10px 20px; }
+          padding: 5px 10px; }
           .cart-container .summary-right .bottom-right-cart .btn-row .cart-btn:hover {
             cursor: pointer; }
         .cart-container .summary-right .bottom-right-cart .btn-row .cancel-btn {
