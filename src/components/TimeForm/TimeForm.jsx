@@ -15,6 +15,7 @@ class TimeForm extends Component {
             returnTime: ''
         }
         this.handleChange = this.handleChange.bind(this)
+        this.formatDate = this.formatDate.bind(this)
         this.getToday = this.getToday.bind(this)
         this.getTomorrow = this.getTomorrow.bind(this)
     }
@@ -25,9 +26,43 @@ class TimeForm extends Component {
     }
 
     handleChange = (e) => {
-        this.setState({[e.target.name]:e.target.value})
-        this.props.updateTime(e.target.name,e.target.value)
+        let value = e.target.value
+        this.formatDate(value)
+        this.setState({[e.target.name]:value})
+        this.props.updateTime(e.target.name,value)
     }
+
+    formatDate = (date) => {
+        let d = new Date(date);
+        let hh = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        let dd = "AM";
+        let h = hh;
+        if (h >= 12) {
+            h = hh - 12;
+            dd = "PM";
+        }
+        if (h === 0) {
+            h = 12;
+        }
+        m = m < 10 ? "0" + m : m;
+
+        s = s < 10 ? "0" + s : s;
+
+        /* if you want 2 digit hours:
+        h = h<10?"0"+h:h; */
+
+        let pattern = new RegExp("0?" + hh + ":" + m + ":" + s);
+
+        let replacement = h + ":" + m;
+        /* if you want to add seconds
+        replacement += ":"+s;  */
+        replacement += " " + dd;
+
+        return date.replace(pattern, replacement);
+    }
+
 
     getToday = () => {
         today = new Date()
@@ -83,14 +118,13 @@ class TimeForm extends Component {
                         name="outDate"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue={today}
                     /><br />
                     <input
                         type="time"
                         name="outTime"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue="16:00:00"
+                        defaultValue="00:00:00"
                     />
                 </div>
                 <div className="col-3 due-in">
@@ -100,14 +134,13 @@ class TimeForm extends Component {
                         name="returnDate"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue={tomorrow}
                     /><br />
                     <input
                         type="time"
                         name="returnTime"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue="15:59:00"
+                        defaultValue="00:00:00"
                     />
                 </div>
             </div>

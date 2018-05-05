@@ -45,10 +45,14 @@ hr {
         padding-left: 10px;
         color: #ff0000; }
   .cart-container .summary-right {
-    background-color: #000; }
+    background-color: #000;
+    color: #fff; }
     .cart-container .summary-right .top-right-cart {
       padding: 15px 0;
-      color: #fff;
       background-color: #32bf9c; }
+    .cart-container .summary-right .bottom-right-cart .current-out {
+      float: right; }
+    .cart-container .summary-right .bottom-right-cart .current-in {
+      float: right; }
 
 /*# sourceMappingURL=Cart.css.map */

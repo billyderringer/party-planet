@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import './Cart.css'
 import InventoryList from './InventoryList'
+import DateSummary from "./DateSummary";
 
 function Cart(props) {
     const {customer} = props
@@ -43,7 +44,7 @@ function Cart(props) {
                         CART
                     </div>
                     <div className="col-12 bottom-right-cart">
-
+                        <DateSummary time={props.time} />
                     </div>
                 </div>
             </div>
@@ -57,7 +58,8 @@ const mapStateToProps = (state) => {
         bounce: state.inventoryReducer.bounce,
         chairs: state.inventoryReducer.chairs,
         tables: state.inventoryReducer.tables,
-        misc: state.inventoryReducer.misc
+        misc: state.inventoryReducer.misc,
+        time: state.timeReducer
     }
 }
 
