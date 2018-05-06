@@ -47,7 +47,7 @@ function Cart(props) {
                     </div>
                     <div className="col-12 bottom-right-cart">
                         <DateSummary time={props.time} />
-                        <CostSummary time={props.time} />
+                        <CostSummary items={[props.tables,props.chairs, props.bounce, props.misc]} />
                         <ButtonRow />
                     </div>
                 </div>

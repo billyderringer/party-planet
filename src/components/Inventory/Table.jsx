@@ -27,6 +27,7 @@ class Table extends Component{
                                         position={i}
                                         needed={item.needed}
                                         available={item.available}
+                                        total={item.total}
                                     />
                                 </td>
                                 <td className="available"

@@ -24,7 +24,8 @@ class Counter extends Component {
             this.props.identity,
             this.props.position,
             countNeeded,
-            currentAvailable
+            currentAvailable,
+            "plus"
         )
     }
 
@@ -40,7 +41,8 @@ class Counter extends Component {
             this.props.identity,
             this.props.position,
             countNeeded,
-            currentAvailable
+            currentAvailable,
+            "minus"
         )
     }
 
@@ -70,8 +72,8 @@ class Counter extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        updateCounterProperty:(identity, position, count, currentAvailable) => {
-            const action = {type: 'UPDATE_NEEDED_PROPERTY', identity, position, count, currentAvailable}
+        updateCounterProperty:(identity, position, count, currentAvailable, operation) => {
+            const action = {type: 'UPDATE_NEEDED_PROPERTY', identity, position, count, currentAvailable, operation}
             dispatch(action)
         }
     }
