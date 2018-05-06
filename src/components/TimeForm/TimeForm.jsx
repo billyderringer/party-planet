@@ -20,7 +20,7 @@ class TimeForm extends Component {
         this.getTomorrow = this.getTomorrow.bind(this)
     }
 
-    componentWillMount(){
+    componentWillMount(e){
         this.getToday()
         this.getTomorrow()
     }
@@ -85,7 +85,7 @@ class TimeForm extends Component {
     }
 
     getTomorrow = () => {
-        let day = new Date()
+        let day = new Date(JSON.date)
         tomorrow = new Date(day)
         tomorrow.setDate(day.getDate()+1)
         let dd = tomorrow.getDate()
@@ -118,13 +118,14 @@ class TimeForm extends Component {
                         name="outDate"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
+                        defaultValue={this.props.time.outDate}
                     /><br />
                     <input
                         type="time"
                         name="outTime"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue="00:00:00"
+                        defaultValue="08:00:00"
                     />
                 </div>
                 <div className="col-3 due-in">
@@ -134,17 +135,24 @@ class TimeForm extends Component {
                         name="returnDate"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
+                        defaultValue={this.props.time.returnDate}
                     /><br />
                     <input
                         type="time"
                         name="returnTime"
                         className="form-control form-control-sm"
                         onChange={this.handleChange}
-                        defaultValue="00:00:00"
+                        defaultValue="08:00:00"
                     />
                 </div>
             </div>
         )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return{
+        time: state.timeReducer
     }
 }
 
@@ -157,4 +165,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(TimeForm)
+export default connect(mapStateToProps, mapDispatchToProps)(TimeForm)
