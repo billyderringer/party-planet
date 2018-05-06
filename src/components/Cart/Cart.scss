@@ -41,29 +41,40 @@
     background-color: $black;
     color: $white;
     .top-right-cart{
-      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 5vh;
       background-color: $green;
     }
     .bottom-right-cart{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      height: 45vh;
       padding: 20px 20px 0;
       hr{
         width: 96%;
-        margin: 5px 0 5px 2%;
+        margin: 10px 0 10px 2%;
         background-color: $darkGrey;
       }
+      .date-summary{
+
+      }
       .current-out{
-        float: right;
+
       }
       .current-in{
-        float: right;
+
       }
       .total-row{
         font-size: 1.2em;
       }
       .btn-row{
-        display: flex;
         justify-content: center;
-        margin-top: 25px;
+        margin-top: 10px;
         .cart-btn{
           color: $white;
           border: none;
