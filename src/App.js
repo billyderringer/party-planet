@@ -17,11 +17,11 @@ class App extends Component {
             <div className="container-main">
                 <NavBar />
                 <div className="row content-row">
-                    <div className="col-6 left-container">
+                    <div className="col-md-6 left-container">
                         <CustomerForm />
                         <InventoryForm />
                     </div>
-                    <div className="col-6 right-container">
+                    <div className="col-md-6 right-container">
                         <TimeForm />
                         <Cart />
                         <Orders />
