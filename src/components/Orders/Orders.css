@@ -26,10 +26,11 @@ hr {
     .orders-container .orders-results .order-row:hover {
       background-color: #e6e6e6; }
     .orders-container .orders-results .order-row .order-name {
-      width: 100%;
-      display: inline-block; }
+      width: 68%; }
+    .orders-container .orders-results .order-row .order-total {
+      width: 30%; }
     .orders-container .orders-results .order-row .order-btn {
-      margin: 5px;
+      margin: 0 5px;
       display: flex;
       align-items: center;
       justify-content: center;

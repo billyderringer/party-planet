@@ -10,12 +10,15 @@
       &:hover{
         background-color: $midGrey;
       }
+
       .order-name{
-        width: 100%;
-        display: inline-block;
+        width: 68%;
+      }
+      .order-total{
+        width: 30%;
       }
       .order-btn{
-        margin: 5px;
+        margin: 0 5px;
         display: flex;
         align-items: center;
         justify-content: center;
