@@ -7,10 +7,10 @@ class Orders extends Component {
         const orders = this.props.orders.map((item,i) => {
             return <tr className="order-row"
                        key={i} >
-                    <td className="order-name">{item.firstName} {item.lastName}</td>
-                <td className="view-col"><h6 className="order-btn view-btn">VIEW</h6></td>
-                    <td className="return-col"><h6 className="order-btn return-btn">RETURN</h6></td>
-                </tr>
+                        <td className="order-name">{item.firstName} {item.lastName}</td>
+                        <td className="view-col"><h6 className="order-btn view-btn">VIEW</h6></td>
+                        <td className="return-col"><h6 className="order-btn return-btn">RETURN</h6></td>
+                    </tr>
         })
         return (
             <div className="orders-container">

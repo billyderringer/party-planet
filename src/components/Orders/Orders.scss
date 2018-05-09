@@ -4,13 +4,15 @@
   height: 25vh;
   padding: 5px;
   .orders-results{
-    height: 20vh;
+    height: 18vh;
     overflow: auto;
     .order-row{
-      background-color: $midGrey;
-      margin: 5px 0;
+      &:hover{
+        background-color: $midGrey;
+      }
       .order-name{
-        width: 70%;
+        width: 100%;
+        display: inline-block;
       }
       .order-btn{
         margin: 5px;
@@ -19,19 +21,20 @@
         justify-content: center;
         padding: 5px;
         border-radius: 4px;
+        font-size: .7em;
         &:hover{
           cursor: pointer;
         }
       }
       .view-col{
-        width: 15%;
+        width: 1%;
         .view-btn{
           color: $white;
           background-color: $green;
         }
       }
       .return-col{
-        width: 15%;
+        width: 1%;
         .return-btn{
           color: $white;
           background-color: $red;

@@ -21,31 +21,32 @@ hr {
   height: 25vh;
   padding: 5px; }
   .orders-container .orders-results {
-    height: 20vh;
+    height: 18vh;
     overflow: auto; }
-    .orders-container .orders-results .order-row {
-      background-color: #e6e6e6;
-      margin: 5px 0; }
-      .orders-container .orders-results .order-row .order-name {
-        width: 70%; }
-      .orders-container .orders-results .order-row .order-btn {
-        margin: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
-        border-radius: 4px; }
-        .orders-container .orders-results .order-row .order-btn:hover {
-          cursor: pointer; }
-      .orders-container .orders-results .order-row .view-col {
-        width: 15%; }
-        .orders-container .orders-results .order-row .view-col .view-btn {
-          color: #fff;
-          background-color: #32bf9c; }
-      .orders-container .orders-results .order-row .return-col {
-        width: 15%; }
-        .orders-container .orders-results .order-row .return-col .return-btn {
-          color: #fff;
-          background-color: #ff0000; }
+    .orders-container .orders-results .order-row:hover {
+      background-color: #e6e6e6; }
+    .orders-container .orders-results .order-row .order-name {
+      width: 100%;
+      display: inline-block; }
+    .orders-container .orders-results .order-row .order-btn {
+      margin: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 4px;
+      font-size: .7em; }
+      .orders-container .orders-results .order-row .order-btn:hover {
+        cursor: pointer; }
+    .orders-container .orders-results .order-row .view-col {
+      width: 1%; }
+      .orders-container .orders-results .order-row .view-col .view-btn {
+        color: #fff;
+        background-color: #32bf9c; }
+    .orders-container .orders-results .order-row .return-col {
+      width: 1%; }
+      .orders-container .orders-results .order-row .return-col .return-btn {
+        color: #fff;
+        background-color: #ff0000; }
 
 /*# sourceMappingURL=Orders.css.map */
