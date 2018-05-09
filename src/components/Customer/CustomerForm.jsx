@@ -24,6 +24,7 @@ class CustomerForm extends Component {
     }
 
     render() {
+        const {customer} = this.props
         return (
             <form>
                 <h2><strong>Customer Info</strong></h2>
@@ -32,25 +33,25 @@ class CustomerForm extends Component {
                         <input type="text"
                                name="firstName"
                                onChange={this.handleChange}
-                               value={this.state.firstName}
+                               value={customer.firstName}
                                className="form-control form-control-sm"
                                placeholder="First Name" />
                         <input type="text"
                                name="lastName"
                                onChange={this.handleChange}
-                               value={this.state.lastName}
+                               value={customer.lastName}
                                className="form-control form-control-sm"
                                placeholder="Last Name" />
                         <input type="tel"
                                name="phoneNumber"
                                onChange={this.handleChange}
-                               value={this.state.phoneNumber}
+                               value={customer.phoneNumber}
                                className="form-control form-control-sm"
                                placeholder="Phone" />
                         <input type="email"
                                name="emailAddress"
                                onChange={this.handleChange}
-                               value={this.state.emailAddress}
+                               value={customer.emailAddress}
                                className="form-control form-control-sm"
                                placeholder="Email" />
 
@@ -59,25 +60,25 @@ class CustomerForm extends Component {
                         <input type="text"
                                name="streetAddress"
                                onChange={this.handleChange}
-                               value={this.state.streetAddress}
+                               value={customer.streetAddress}
                                className="form-control form-control-sm"
                                placeholder="Street Address" />
                         <input type="text"
                                name="city"
                                onChange={this.handleChange}
-                               value={this.state.city}
+                               value={customer.city}
                                className="form-control form-control-sm"
                                placeholder="City" />
                         <input type="text"
                                name="usState"
                                onChange={this.handleChange}
-                               value={this.state.usState}
+                               value={customer.usState}
                                className="form-control form-control-sm"
                                placeholder="State" />
                         <input type="text"
                                name="zipCode"
                                onChange={this.handleChange}
-                               value={this.state.zipCode}
+                               value={customer.zipCode}
                                className="form-control form-control-sm"
                                pattern="[0-9]{5}"
                                placeholder="Zip Code" />
@@ -85,6 +86,12 @@ class CustomerForm extends Component {
                 </div>
             </form>
         )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return{
+        customer: state.customerReducer.currentCustomer
     }
 }
 
@@ -97,4 +104,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps) (CustomerForm)
+export default connect(mapStateToProps, mapDispatchToProps) (CustomerForm)

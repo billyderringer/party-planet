@@ -1,7 +1,7 @@
 const initialState = {
-    outDate: '2000-01-01',
+    outDate: '2018-01-01',
     outTime: '0800',
-    returnDate: '2000-01-02',
+    returnDate: '2018-01-02',
     returnTime: '0800'
 }
 

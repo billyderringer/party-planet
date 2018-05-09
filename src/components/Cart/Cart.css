@@ -60,7 +60,7 @@ hr {
       align-items: center;
       justify-content: center;
       height: 45vh;
-      padding: 20px 20px 0; }
+      padding: 0 20px 0; }
       .cart-container .summary-right .bottom-right-cart hr {
         width: 96%;
         margin: 10px 0 10px 2%;
@@ -69,7 +69,7 @@ hr {
         font-size: 1.2em; }
       .cart-container .summary-right .bottom-right-cart .btn-row {
         justify-content: center;
-        margin-top: 10px; }
+        margin-top: 5px; }
         .cart-container .summary-right .bottom-right-cart .btn-row .cart-btn {
           color: #fff;
           border: none;

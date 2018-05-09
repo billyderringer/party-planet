@@ -45,12 +45,10 @@ function Cart(props) {
                     <div className="col-12 top-right-cart text-center">
                         CART
                     </div>
-                    <div className="col-12">
-                        <div className="bottom-right-cart">
-
-                            <CostSummary time={props.time} items={[props.tables,props.chairs, props.bounce, props.misc]} />
-                            <ButtonRow />
-                        </div>
+                    <div className="col-12 bottom-right-cart">
+                        <DateSummary time={props.time} />
+                        <CostSummary items={[props.tables,props.chairs, props.bounce, props.misc]} />
+                        <ButtonRow />
                     </div>
                 </div>
             </div>

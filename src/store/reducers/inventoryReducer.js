@@ -70,7 +70,7 @@ const initialState = {
             available: 30,
             price: 8
         }
-        ],
+    ],
     misc:[
         {
             description:'Frozen Drink - Single',

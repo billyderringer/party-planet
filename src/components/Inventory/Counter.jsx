@@ -49,13 +49,13 @@ class Counter extends Component {
     render() {
         return (
             <div className="counter">
-               <button
+                <button
                     onClick={this.handleMinus}
-               >
-                   <i className="fa fa-minus minus"
-                      aria-hidden="true"
-                      />
-               </button>
+                >
+                    <i className="fa fa-minus minus"
+                       aria-hidden="true"
+                    />
+                </button>
                 <h6 id="valueHolder">
                     {this.props.needed}
                 </h6>
@@ -63,7 +63,7 @@ class Counter extends Component {
                     onClick={this.handlePlus} >
                     <i className="fa fa-plus plus"
                        aria-hidden="true"
-                      />
+                    />
                 </button>
             </div>
         )
