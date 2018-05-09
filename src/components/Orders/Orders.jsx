@@ -8,17 +8,20 @@ class Orders extends Component {
             return <tr className="order-row"
                        key={i} >
                     <td className="order-name">{item.firstName} {item.lastName}</td>
-                <td className="view-col"><button className="btn view-btn">VIEW</button></td>
-                    <td className="return-col"><button className="btn return-btn">RETURN</button></td>
+                <td className="view-col"><h6 className="order-btn view-btn">VIEW</h6></td>
+                    <td className="return-col"><h6 className="order-btn return-btn">RETURN</h6></td>
                 </tr>
         })
         return (
             <div className="orders-container">
-                <table>
-                    <tbody>
+                <h2><strong>Orders</strong></h2>
+                <div className="orders-results">
+                    <table>
+                        <tbody>
                         {orders}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }
