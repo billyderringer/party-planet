@@ -5,9 +5,6 @@ import {connect} from "react-redux";
 class Counter extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            currentCount: 0
-        }
         this.handlePlus = this.handlePlus.bind(this)
         this.handleMinus = this.handleMinus.bind(this)
     }

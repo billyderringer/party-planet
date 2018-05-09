@@ -30,7 +30,6 @@ class ConfirmButton extends Component{
             .map((item, i) => {
                 return filteredOrders.push(item)
             })
-        console.log(filteredOrders)
 
         const newCustomer = {
             firstName : customer.firstName,
@@ -44,6 +43,7 @@ class ConfirmButton extends Component{
             order: filteredOrders
         }
         this.props.addNewCustomer(newCustomer)
+        this.props.updateAvailability()
     }
 
     render() {
@@ -72,6 +72,10 @@ const mapDispatchToProps = (dispatch) => {
     return{
         addNewCustomer:(newCustomer) => {
             const action = {type: 'ADD_CUSTOMER', newCustomer}
+            dispatch(action)
+        },
+        updateAvailability: () => {
+            const action = {type: 'UPDATE_AVAILABILITY'}
             dispatch(action)
         }
     }

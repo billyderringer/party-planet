@@ -129,6 +129,46 @@ const reducer = (state = initialState, action) => {
                 [id]:inventory,
                 subtotal: subtotal
             }
+        case  'UPDATE_AVAILABILITY':
+            const bounce = state.bounce.map(item => {
+                return {
+                    ...item,
+                    needed : 0,
+                    available : (item.available - item.needed),
+                    currentAvailable : 0
+                }
+            })
+            const chairs = state.chairs.map(item => {
+                return {
+                    ...item,
+                    needed : 0,
+                    available : (item.available - item.needed),
+                    currentAvailable : 0
+                }
+            })
+            const tables = state.tables.map(item => {
+                return {
+                    ...item,
+                    needed : 0,
+                    available : (item.available - item.needed),
+                    currentAvailable : 0
+                }
+            })
+            const misc = state.misc.map(item => {
+                return {
+                    ...item,
+                    needed : 0,
+                    available : (item.available - item.needed),
+                    currentAvailable : 0
+                }
+            })
+            return{
+                ...(state),
+                bounce,
+                chairs,
+                tables,
+                misc
+            }
         default:
             return state
     }

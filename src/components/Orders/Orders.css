@@ -18,6 +18,22 @@ hr {
   background-color: #f6f7fb; }
 
 .orders-container {
-  height: 25vh; }
+  height: 25vh;
+  padding: 5px; }
+  .orders-container .order-row {
+    background-color: #e6e6e6;
+    margin: 5px 0; }
+    .orders-container .order-row .order-name {
+      width: 70%; }
+    .orders-container .order-row .view-col {
+      width: 15%; }
+      .orders-container .order-row .view-col .view-btn {
+        color: #fff;
+        background-color: #32bf9c; }
+    .orders-container .order-row .return-col {
+      width: 15%; }
+      .orders-container .order-row .return-col .return-btn {
+        color: #fff;
+        background-color: #ff0000; }
 
 /*# sourceMappingURL=Orders.css.map */

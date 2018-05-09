@@ -5,16 +5,6 @@ import './CustomerForm.css'
 class CustomerForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            firstName: '',
-            lastName: '',
-            phoneNumber: '',
-            emailAddress: '',
-            streetAddress: '',
-            city: '',
-            usState: '',
-            zipCode: ''
-        }
         this.handleChange = this.handleChange.bind(this)
     }
 
