@@ -31,7 +31,13 @@ hr {
   display: flex;
   align-items: center;
   padding-left: 45px; }
+  .ContainerNav img {
+    width: 3vh;
+    height: 3vh;
+    margin: 0 10px;
+    display: inline-block; }
   .ContainerNav h1 {
+    display: inline;
     font-size: 1.2em; }
 
 /*# sourceMappingURL=NavBar.css.map */

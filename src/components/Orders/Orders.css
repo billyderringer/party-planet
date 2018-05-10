@@ -53,7 +53,8 @@ hr {
       background-color: #32bf9c;
       color: #fff;
       padding: 5px 0; }
-    .orders-container .orders-view .customer-body ul li {
-      text-decoration: none; }
+    .orders-container .orders-view .customer-body {
+      padding: 10px 10px 0;
+      font-size: .7em; }
 
 /*# sourceMappingURL=Orders.css.map */
