@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Cart.css'
+import '../Cart.css'
 
 class CancelButton extends Component{
     render() {

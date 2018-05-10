@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import './CustomerForm.css'
+import TimeForm from '../TimeForm/'
 
 class CustomerForm extends Component {
     constructor(props) {
@@ -17,9 +18,12 @@ class CustomerForm extends Component {
         const {customer} = this.props
         return (
             <form>
-                <h2><strong>Customer Info</strong></h2>
+
                 <div className="row customer-form">
-                    <div className="col-6 left-col">
+                    <div className="col-12">
+                        <h2><strong>Customer Info</strong></h2>
+                    </div>
+                    <div className="col-3 left-col">
                         <input type="text"
                                name="firstName"
                                onChange={this.handleChange}
@@ -44,9 +48,8 @@ class CustomerForm extends Component {
                                value={customer.emailAddress}
                                className="form-control form-control-sm"
                                placeholder="Email" />
-
                      </div>
-                    <div className="col-6 right-col">
+                    <div className="col-3 right-col">
                         <input type="text"
                                name="streetAddress"
                                onChange={this.handleChange}
@@ -72,6 +75,9 @@ class CustomerForm extends Component {
                                className="form-control form-control-sm"
                                pattern="[0-9]{5}"
                                placeholder="Zip Code" />
+                    </div>
+                    <div className="col-6">
+                        <TimeForm />
                     </div>
                 </div>
             </form>

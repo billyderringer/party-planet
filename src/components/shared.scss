@@ -2,8 +2,9 @@
 $white: #fff;
 $offWhite: #f6f7fb;
 $black: #000;
-$midGrey: #e6e6e6;
-$darkGrey: #898989;
+$lightGrey: #d0d0d0;
+$midGrey: #9a9a9a;
+$darkGrey: #3e3e3e;
 $purple: #802dc7;
 $red: #ff0000;
 $green: #32bf9c;
@@ -26,16 +27,18 @@ hr{
   margin: 0;
 }
 
+.row{
+  margin: 0;
+  padding: 0;
+}
 
 .content-row{
   height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: $offWhite;
-  .left-container{
-  }
-
-  .right-container{
-
+  .shared-col{
+    margin: 0;
+    padding: 0;
   }
 }

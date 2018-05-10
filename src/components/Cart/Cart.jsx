@@ -2,55 +2,47 @@ import React from 'react'
 import {connect} from 'react-redux'
 import './Cart.css'
 import InventoryList from './InventoryList'
-import DateSummary from "./DateSummary";
+import CustomerSummary from './CustomerSummary'
+import DateSummary from "../Customer/DateSummary";
 import CostSummary from "./CostSummary";
-import ButtonRow from './ButtonRow'
+import ButtonRow from './Button/ButtonRow'
 
 function Cart(props) {
-    const {customer} = props
     return (
         <div className="row cart-container">
-            <div className="col-7 summary-left">
-                <div className="row">
-                    <div className="col-12 top-left-cart text-center">
-                        <p className="customer-summary">
-                            {customer.firstName || customer.lastName ?
-                                customer.firstName + '  ' + customer.lastName : 'Name'}<br/>
-                            {customer.phoneNumber ? customer.phoneNumber : 'Phone Number'}<br/>
-                            {customer.emailAddress ? customer.emailAddress : 'Email'}<br/>
-                            {customer.streetAddress ? customer.streetAddress : 'Street Address'}<br/>
-                            {customer.city ? customer.city : 'City'}&nbsp;
-                            {customer.usState ? customer.usState : 'State'}&nbsp;
-                            {customer.zipCode ? customer.zipCode : 'Zip'}
-                        </p>
-                    </div>
-                    <div className="col-12 bottom-left-cart">
-                        <table className="table">
-                            <tbody>
-                            <tr>
-                                <th>Description</th>
-                                <th>Qty</th>
-                            </tr>
-                            <InventoryList items={props.tables} />
-                            <InventoryList items={props.chairs} />
-                            <InventoryList items={props.bounce} />
-                            <InventoryList items={props.misc} />
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div className="col-12 cart-header text-center">
+                CART
             </div>
-            <div className="col-5 summary-right">
-                <div className="row">
-                    <div className="col-12 top-right-cart text-center">
-                        CART
-                    </div>
-                    <div className="col-12 bottom-right-cart">
-                        <DateSummary time={props.time} />
-                        <CostSummary items={[props.tables,props.chairs, props.bounce, props.misc]} />
-                        <ButtonRow />
-                    </div>
-                </div>
+            <div className="col-12 customer-summary text-center">
+                <CustomerSummary customer={props.customer} />
+            </div>
+            <hr />
+            <div className="row time-summary">
+                <DateSummary time={props.time} />
+            </div>
+            <hr />
+            <div className="row cost-summary">
+                <CostSummary items={[props.tables,props.chairs, props.bounce, props.misc]} />
+            </div>
+            <div className="row btn-row">
+                <ButtonRow />
+            </div>
+            <div className="col-12 inventory-header">
+                <h3 className="text-center">Current Order</h3>
+            </div>
+            <div className="col-12 inventory-list">
+                <table className="table">
+                    <tbody>
+                    <tr>
+                        <th>Description</th>
+                        <th>Qty</th>
+                    </tr>
+                    <InventoryList items={props.tables} />
+                    <InventoryList items={props.chairs} />
+                    <InventoryList items={props.bounce} />
+                    <InventoryList items={props.misc} />
+                    </tbody>
+                </table>
             </div>
         </div>
     )

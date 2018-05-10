@@ -11,16 +11,23 @@ h2 {
 hr {
   margin: 0; }
 
+.row {
+  margin: 0;
+  padding: 0; }
+
 .content-row {
   height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .shared-col {
+    margin: 0;
+    padding: 0; }
 
 .inventory-row {
   padding-bottom: 10px; }
   .inventory-row .inventory-table {
-    height: 55vh;
+    height: 60vh;
     overflow-y: scroll; }
     .inventory-row .inventory-table .table {
       width: 100%; }
@@ -45,7 +52,7 @@ h3 {
   .counter button:hover {
     cursor: pointer; }
 .counter .minus {
-  color: #898989; }
+  color: #3e3e3e; }
 .counter .plus {
   color: #32bf9c; }
 .counter h6 {

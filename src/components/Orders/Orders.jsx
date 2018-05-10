@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import './Orders.css'
+import OrderView from  './OrderView'
 
 class Orders extends Component {
     render() {
@@ -8,17 +9,20 @@ class Orders extends Component {
             return <tr className="order-row"
                        key={i} >
                     <td className="order-name">{item.firstName} {item.lastName}</td>
-                <td className="view-col"><button className="btn view-btn">VIEW</button></td>
-                    <td className="return-col"><button className="btn return-btn">RETURN</button></td>
+                    <td className="view-col"><button className="btn view-btn">VIEW</button></td>
                 </tr>
         })
         return (
-            <div className="orders-container">
-                <table>
-                    <tbody>
-                        {orders}
-                    </tbody>
-                </table>
+            <div className="col-12 orders-container">
+                <h2><strong>Orders</strong></h2>
+                <div className="orders-table">
+                    <table>
+                        <tbody>
+                            {orders}
+                        </tbody>
+                    </table>
+                </div>
+                <OrderView />
             </div>
         )
     }

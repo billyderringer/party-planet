@@ -11,29 +11,49 @@ h2 {
 hr {
   margin: 0; }
 
+.row {
+  margin: 0;
+  padding: 0; }
+
 .content-row {
   height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .shared-col {
+    margin: 0;
+    padding: 0; }
 
 .orders-container {
-  height: 25vh;
-  padding: 5px; }
-  .orders-container .order-row {
-    background-color: #e6e6e6;
-    margin: 5px 0; }
-    .orders-container .order-row .order-name {
-      width: 70%; }
-    .orders-container .order-row .view-col {
-      width: 15%; }
-      .orders-container .order-row .view-col .view-btn {
-        color: #fff;
-        background-color: #32bf9c; }
-    .orders-container .order-row .return-col {
-      width: 15%; }
-      .orders-container .order-row .return-col .return-btn {
-        color: #fff;
-        background-color: #ff0000; }
+  padding: 10px; }
+  .orders-container .orders-table {
+    height: 30vh;
+    overflow: auto;
+    outline: 1px solid #d0d0d0;
+    background-color: #fff; }
+    .orders-container .orders-table td {
+      padding: 5px 10px; }
+  .orders-container .order-row:hover {
+    background-color: #d0d0d0; }
+  .orders-container .order-row .order-name {
+    width: 70%; }
+  .orders-container .order-row .view-col {
+    width: 15%; }
+    .orders-container .order-row .view-col .view-btn {
+      color: #fff;
+      background-color: #32bf9c;
+      font-size: .6em; }
+  .orders-container .orders-view {
+    padding: 5px;
+    height: 58vh;
+    margin-top: 1vh;
+    outline: 1px solid #d0d0d0;
+    background-color: #fff; }
+    .orders-container .orders-view .customer-header {
+      background-color: #32bf9c;
+      color: #fff;
+      padding: 5px 0; }
+    .orders-container .orders-view .customer-body ul li {
+      text-decoration: none; }
 
 /*# sourceMappingURL=Orders.css.map */

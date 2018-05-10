@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Cart.css'
+import '../Cart.css'
 import {connect} from 'react-redux'
 
 class ConfirmButton extends Component{

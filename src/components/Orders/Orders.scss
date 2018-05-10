@@ -1,11 +1,20 @@
 @import "../shared";
 
 .orders-container{
-  height: 25vh;
-  padding: 5px;
+  padding: 10px;
+  .orders-table{
+    height: 30vh;
+    overflow: auto;
+    outline: 1px solid $lightGrey;
+    background-color: $white;
+    td{
+      padding: 5px 10px;
+    }
+  }
   .order-row{
-    background-color: $midGrey;
-    margin: 5px 0;
+    &:hover{
+      background-color: $lightGrey;
+    }
     .order-name{
       width: 70%;
     }
@@ -14,13 +23,26 @@
       .view-btn{
         color: $white;
         background-color: $green;
+        font-size: .6em;
       }
     }
-    .return-col{
-      width: 15%;
-      .return-btn{
-        color: $white;
-        background-color: $red;
+  }
+  .orders-view{
+    padding: 5px;
+    height: 58vh;
+    margin-top: 1vh;
+    outline: 1px solid $lightGrey;
+    background-color: $white;
+    .customer-header{
+      background-color: $green;
+      color: $white;
+      padding: 5px 0;
+    }
+    .customer-body{
+      ul{
+        li{
+          text-decoration: none;
+        }
       }
     }
   }

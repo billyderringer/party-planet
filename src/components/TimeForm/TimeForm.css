@@ -11,15 +11,22 @@ h2 {
 hr {
   margin: 0; }
 
+.row {
+  margin: 0;
+  padding: 0; }
+
 .content-row {
   height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .shared-col {
+    margin: 0;
+    padding: 0; }
 
 .time-container {
   display: flex;
   align-items: center;
   height: 20vh; }
 
-/*# sourceMappingURL=TimeForm.css.css.map */
+/*# sourceMappingURL=TimeForm.css.map */

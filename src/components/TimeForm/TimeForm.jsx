@@ -111,7 +111,7 @@ class TimeForm extends Component {
 
         return (
             <div className="row time-container">
-                <div className="col-3 sent-out">
+                <div className="col-6 sent-out">
                     <h3><strong>Out</strong></h3>
                     <input
                         type="date"
@@ -128,7 +128,7 @@ class TimeForm extends Component {
                         defaultValue="08:00:00"
                     />
                 </div>
-                <div className="col-3 due-in">
+                <div className="col-6 due-in">
                     <h3><strong>In</strong></h3>
                     <input
                         type="date"

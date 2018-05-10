@@ -11,14 +11,21 @@ h2 {
 hr {
   margin: 0; }
 
+.row {
+  margin: 0;
+  padding: 0; }
+
 .content-row {
   height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .shared-col {
+    margin: 0;
+    padding: 0; }
 
 form {
-  height: 35vh;
+  height: 30vh;
   padding-top: 10px; }
 
 .left-col {

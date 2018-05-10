@@ -1,99 +1,80 @@
 @import "../shared";
 
 .cart-container{
-  height: 50vh;
-  padding-right: 5px;
-  .summary-left{
-    .row{
-      padding: 0 5px;
-    }
-    .top-left-cart{
-      background-color: $black;
-      color: $white;
-      height: 17vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .customer-summary{
-        font-size: 1em;
-      }
-    }
-    .bottom-left-cart{
-      margin-top: 5px;
-      overflow-y: auto;
-      height: 30vh;
-      .summary-description{
-        width: 80%;
-      }
-      .summary-qty{
-        width: 10%;
-      }
-      .summary-remove {
-        width: 10%;
-        .remove {
-          padding-left: 10px;
-          color: $red;
-        }
-      }
+  height: 100vh;
+  background-color: $darkGrey;
+  color: $white;
+  .cart-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    background-color: $green;
+  }
+  hr{
+    width: 90%;
+    margin: 10px 0 10px 5%;
+    background-color: $darkGrey;
+  }
+  .customer-summary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+      font-size: 1em;
     }
   }
-
-  .summary-right{
-    background-color: $black;
-    color: $white;
-    .top-right-cart{
+  .time-summary{
+    width: 100%;
+  }
+  .cost-summary{
+    font-size: 1.2em;
+  }
+  .btn-row{
+    width: 100%;
+    margin: 10px 0;
+    .btn-col{
       display: flex;
-      align-items: center;
       justify-content: center;
-      height: 5vh;
-      background-color: $green;
+      align-items: center;
     }
-    .bottom-right-cart{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      height: 45vh;
-      padding: 0 20px 0;
-      hr{
-        width: 96%;
-        margin: 10px 0 10px 2%;
-        background-color: $darkGrey;
+    .cart-btn{
+      color: $white;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: .8em;
+      &:hover{
+        cursor: pointer;
       }
-      .date-summary{
-
-      }
-      .current-out{
-
-      }
-      .current-in{
-
-      }
-      .total-row{
-        font-size: 1.2em;
-      }
-      .btn-row{
-        justify-content: center;
-        margin-top: 5px;
-        .cart-btn{
-          color: $white;
-          border: none;
-          border-radius: 4px;
-          padding: 5px 10px;
-          &:hover{
-            cursor: pointer;
-          }
-        }
-        .cancel-btn{
-          background-color: $red;
-          margin-right: 20px;
-        }
-        .save-btn{
-          background-color: $green;
-          margin-left: 20px;
-        }
-      }
+    }
+    .cancel-btn{
+      background-color: $red;
+      margin-right: 20px;
+    }
+    .save-btn{
+      background-color: $green;
+      margin-left: 20px;
+    }
+  }
+  .inventory-header{
+    padding: 5px 0;
+    background-color: $green;
+  }
+  .inventory-list{
+    overflow-y: auto;
+    height: 30vh;
+    outline: 1px solid $lightGrey;
+    color: $black;
+    background-color: $white;
+    th{
+      border: none;
+    }
+    .summary-description{
+      width: 90%;
+    }
+    .summary-qty{
+      width: 10%;
     }
   }
 }

@@ -11,77 +11,78 @@ h2 {
 hr {
   margin: 0; }
 
+.row {
+  margin: 0;
+  padding: 0; }
+
 .content-row {
   height: 95vh;
   overflow: hidden;
   margin: 0;
   background-color: #f6f7fb; }
+  .content-row .shared-col {
+    margin: 0;
+    padding: 0; }
 
 .cart-container {
-  height: 50vh;
-  padding-right: 5px; }
-  .cart-container .summary-left .row {
-    padding: 0 5px; }
-  .cart-container .summary-left .top-left-cart {
-    background-color: #000;
-    color: #fff;
-    height: 17vh;
+  height: 100vh;
+  background-color: #3e3e3e;
+  color: #fff; }
+  .cart-container .cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    background-color: #32bf9c; }
+  .cart-container hr {
+    width: 90%;
+    margin: 10px 0 10px 5%;
+    background-color: #3e3e3e; }
+  .cart-container .customer-summary {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .cart-container .summary-left .top-left-cart .customer-summary {
+    .cart-container .customer-summary p {
       font-size: 1em; }
-  .cart-container .summary-left .bottom-left-cart {
-    margin-top: 5px;
+  .cart-container .time-summary {
+    width: 100%; }
+  .cart-container .cost-summary {
+    font-size: 1.2em; }
+  .cart-container .btn-row {
+    width: 100%;
+    margin: 10px 0; }
+    .cart-container .btn-row .btn-col {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .cart-container .btn-row .cart-btn {
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+      font-size: .8em; }
+      .cart-container .btn-row .cart-btn:hover {
+        cursor: pointer; }
+    .cart-container .btn-row .cancel-btn {
+      background-color: #ff0000;
+      margin-right: 20px; }
+    .cart-container .btn-row .save-btn {
+      background-color: #32bf9c;
+      margin-left: 20px; }
+  .cart-container .inventory-header {
+    padding: 5px 0;
+    background-color: #32bf9c; }
+  .cart-container .inventory-list {
     overflow-y: auto;
-    height: 30vh; }
-    .cart-container .summary-left .bottom-left-cart .summary-description {
-      width: 80%; }
-    .cart-container .summary-left .bottom-left-cart .summary-qty {
+    height: 30vh;
+    outline: 1px solid #d0d0d0;
+    color: #000;
+    background-color: #fff; }
+    .cart-container .inventory-list th {
+      border: none; }
+    .cart-container .inventory-list .summary-description {
+      width: 90%; }
+    .cart-container .inventory-list .summary-qty {
       width: 10%; }
-    .cart-container .summary-left .bottom-left-cart .summary-remove {
-      width: 10%; }
-      .cart-container .summary-left .bottom-left-cart .summary-remove .remove {
-        padding-left: 10px;
-        color: #ff0000; }
-  .cart-container .summary-right {
-    background-color: #000;
-    color: #fff; }
-    .cart-container .summary-right .top-right-cart {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 5vh;
-      background-color: #32bf9c; }
-    .cart-container .summary-right .bottom-right-cart {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      height: 45vh;
-      padding: 0 20px 0; }
-      .cart-container .summary-right .bottom-right-cart hr {
-        width: 96%;
-        margin: 10px 0 10px 2%;
-        background-color: #898989; }
-      .cart-container .summary-right .bottom-right-cart .total-row {
-        font-size: 1.2em; }
-      .cart-container .summary-right .bottom-right-cart .btn-row {
-        justify-content: center;
-        margin-top: 5px; }
-        .cart-container .summary-right .bottom-right-cart .btn-row .cart-btn {
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          padding: 5px 10px; }
-          .cart-container .summary-right .bottom-right-cart .btn-row .cart-btn:hover {
-            cursor: pointer; }
-        .cart-container .summary-right .bottom-right-cart .btn-row .cancel-btn {
-          background-color: #ff0000;
-          margin-right: 20px; }
-        .cart-container .summary-right .bottom-right-cart .btn-row .save-btn {
-          background-color: #32bf9c;
-          margin-left: 20px; }
 
 /*# sourceMappingURL=Cart.css.map */

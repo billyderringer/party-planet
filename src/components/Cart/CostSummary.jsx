@@ -8,27 +8,27 @@ function CostSummary(props){
     let tax = props.subtotal * taxRate
     let total = subtotal + tax
     return (
-        <div className="row date-summary">
-            <div className="col-6 out-title">
+        <React.Fragment>
+            <div className="col-8 out-title">
                 <h3>Subtotal:</h3>
             </div>
-            <div className="col-6 current-out">
+            <div className="col-4 current-out">
                 <h3>$ {parseFloat(subtotal).toFixed(2)}</h3>
             </div>
-            <div className="col-6 in-title">
+            <div className="col-8 in-title">
                 <h3>Tax({taxRate * 100}%):</h3>
             </div>
-            <div className="col-6 current-in">
+            <div className="col-4 current-in">
                 <h3>$ {parseFloat(tax).toFixed(2)}</h3>
             </div>
             <hr />
-            <div className="col-6 total-row">
+            <div className="col-8 total-row">
                 <h3>TOTAL:</h3>
             </div>
-            <div className="col-6 total-row">
+            <div className="col-4 total-row">
                 <h3>$ {parseFloat(total).toFixed(2)}</h3>
             </div>
-        </div>
+        </React.Fragment>
     )
 }
 

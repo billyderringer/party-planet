@@ -6,9 +6,8 @@ import CustomerForm from './components/Customer/'
 import InventoryForm from './components/Inventory'
 // eslint-disable-next-line
 import TestOutput from  './components/TestOutput'
-import TimeForm from "./components/TimeForm/";
-import Cart from "./components/Cart/Cart";
-import Orders from "./components/Orders/Orders";
+import Cart from "./components/Cart/Cart"
+import Orders from "./components/Orders/"
 
 class App extends Component {
     render() {
@@ -17,14 +16,18 @@ class App extends Component {
             <div className="container-main">
                 <NavBar />
                 <div className="row content-row">
-                    <div className="col-md-6 left-container">
+                    <div className="col-md-6 shared-col">
                         <CustomerForm />
                         <InventoryForm />
                     </div>
-                    <div className="col-md-6 right-container">
-                        <TimeForm />
+                    <div className="col-md-3 shared-col">
+                        <div className="row">
+                            <Orders />
+                        </div>
+
+                    </div>
+                    <div className="col-md-3 shared-col">
                         <Cart />
-                        <Orders />
                     </div>
                 </div>
             </div>

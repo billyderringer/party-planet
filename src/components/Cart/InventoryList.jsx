@@ -12,14 +12,6 @@ class InventoryList extends Component{
                 key={item.description + '_' + item.description.needed}
             >{item.needed}
             </td>
-            <td className="summary-remove"
-                key={item.description + '_icon_container'}
-            >
-                <i className="fa fa-times-circle remove"
-                   key={item.description + '_icon'}
-                   aria-hidden="true"
-                />
-            </td>
         </tr>
     }
 
