@@ -24,12 +24,20 @@ class ConfirmButton extends Component{
                 .concat(misc)
 
         let filteredOrders = []
+        let total = 0
 
+        //get added items from inventory to add to order
         orders
             .filter(item => item.needed > 0)
             .map((item, i) => {
                 return filteredOrders.push(item)
             })
+
+        //get total for each order
+        filteredOrders.map(item => {
+            let qtyPrice = (item.price * item.needed)
+           return total += ( qtyPrice + (qtyPrice * .0625))
+        })
 
         const newCustomer = {
             firstName : customer.firstName,
@@ -40,7 +48,8 @@ class ConfirmButton extends Component{
             city : customer.city,
             usState : customer.usState,
             zipCode : customer.zipCode,
-            order: filteredOrders
+            order : filteredOrders,
+            total : total
         }
         this.props.addNewCustomer(newCustomer)
         this.props.updateAvailability()

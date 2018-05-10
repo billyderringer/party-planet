@@ -21,13 +21,12 @@ class App extends Component {
                         <InventoryForm />
                     </div>
                     <div className="col-md-3 shared-col">
+                        <Cart />
+                    </div>
+                    <div className="col-md-3 shared-col">
                         <div className="row">
                             <Orders />
                         </div>
-
-                    </div>
-                    <div className="col-md-3 shared-col">
-                        <Cart />
                     </div>
                 </div>
             </div>

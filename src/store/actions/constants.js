@@ -12,7 +12,10 @@ const constants = {
     RESET_AVAILABILITY: 'RESET_AVAILABILITY',
 
     //time
-    SET_TIME: 'SET_TIME'
+    SET_TIME: 'SET_TIME',
+
+    //order
+    GET_CUSTOMER: 'GET_CUSTOMER'
 }
 
 export default constants

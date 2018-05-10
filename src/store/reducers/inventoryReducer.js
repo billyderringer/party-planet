@@ -164,6 +164,7 @@ const reducer = (state = initialState, action) => {
             })
             return{
                 ...(state),
+                subtotal : 0,
                 bounce,
                 chairs,
                 tables,

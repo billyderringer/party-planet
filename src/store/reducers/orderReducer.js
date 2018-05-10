@@ -8,15 +8,13 @@ const initialState = {
         city: '',
         usState: '',
         zipCode: ''
-    },
-    customers:[]
+    }
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'ADD_CUSTOMER' :
+        case 'GET_CUSTOMER' :
             return {
-
                 currentCustomer:{
                     firstName: '',
                     lastName: '',
@@ -26,18 +24,6 @@ const reducer = (state = initialState, action) => {
                     city: '',
                     usState: '',
                     zipCode: ''
-                },
-                customers: [
-                    ...state.customers,
-                    action.newCustomer
-                ]
-            }
-        case 'UPDATE_CUSTOMER_PROPERTY':
-            return {
-                ...state,
-                currentCustomer:{
-                    ...state.currentCustomer,
-                    [action.property]:action.value
                 }
             }
         default:

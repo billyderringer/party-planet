@@ -2,13 +2,15 @@ import { createStore, combineReducers } from 'redux'
 import customerReducer from './reducers/customerReducer'
 import inventoryReducer from './reducers/inventoryReducer'
 import timeReducer from './reducers/timeReducer'
+import orderReducer from  './reducers/orderReducer'
 //import {loadState, saveState} from './localStorage'
 
 //const persistedState = loadState()
 const reducer = combineReducers({
     customerReducer,
     inventoryReducer,
-    timeReducer
+    timeReducer,
+    orderReducer
 })
 
 const store = createStore(
