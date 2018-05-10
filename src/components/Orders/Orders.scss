@@ -3,45 +3,24 @@
 .orders-container{
   height: 25vh;
   padding: 5px;
-  .orders-results{
-    height: 18vh;
-    overflow: auto;
-    .order-row{
-      &:hover{
-        background-color: $midGrey;
+  .order-row{
+    background-color: $midGrey;
+    margin: 5px 0;
+    .order-name{
+      width: 70%;
+    }
+    .view-col{
+      width: 15%;
+      .view-btn{
+        color: $white;
+        background-color: $green;
       }
-
-      .order-name{
-        width: 68%;
-      }
-      .order-total{
-        width: 30%;
-      }
-      .order-btn{
-        margin: 0 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
-        border-radius: 4px;
-        font-size: .7em;
-        &:hover{
-          cursor: pointer;
-        }
-      }
-      .view-col{
-        width: 1%;
-        .view-btn{
-          color: $white;
-          background-color: $green;
-        }
-      }
-      .return-col{
-        width: 1%;
-        .return-btn{
-          color: $white;
-          background-color: $red;
-        }
+    }
+    .return-col{
+      width: 15%;
+      .return-btn{
+        color: $white;
+        background-color: $red;
       }
     }
   }

@@ -20,33 +20,19 @@ hr {
 .orders-container {
   height: 25vh;
   padding: 5px; }
-  .orders-container .orders-results {
-    height: 18vh;
-    overflow: auto; }
-    .orders-container .orders-results .order-row:hover {
-      background-color: #e6e6e6; }
-    .orders-container .orders-results .order-row .order-name {
-      width: 68%; }
-    .orders-container .orders-results .order-row .order-total {
-      width: 30%; }
-    .orders-container .orders-results .order-row .order-btn {
-      margin: 0 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px;
-      border-radius: 4px;
-      font-size: .7em; }
-      .orders-container .orders-results .order-row .order-btn:hover {
-        cursor: pointer; }
-    .orders-container .orders-results .order-row .view-col {
-      width: 1%; }
-      .orders-container .orders-results .order-row .view-col .view-btn {
+  .orders-container .order-row {
+    background-color: #e6e6e6;
+    margin: 5px 0; }
+    .orders-container .order-row .order-name {
+      width: 70%; }
+    .orders-container .order-row .view-col {
+      width: 15%; }
+      .orders-container .order-row .view-col .view-btn {
         color: #fff;
         background-color: #32bf9c; }
-    .orders-container .orders-results .order-row .return-col {
-      width: 1%; }
-      .orders-container .orders-results .order-row .return-col .return-btn {
+    .orders-container .order-row .return-col {
+      width: 15%; }
+      .orders-container .order-row .return-col .return-btn {
         color: #fff;
         background-color: #ff0000; }
 
