@@ -11,10 +11,10 @@ class OrderView extends Component {
                         <h6>Rachael Derringer</h6>
                     </div>
                     <div className="col-12 customer-body">
-                            <h6>Email: rderringer@yahoo.com</h6>
-                            <h6>Phone: 214-480-0284</h6>
-                            <h6>Address: 15250 Kleberg Rd #27<br/>
-                                Dallas , TX, 75253
+                            <h6>Email: sample@sample.com</h6>
+                            <h6>Phone: 111-111-1111</h6>
+                            <h6>Address: 1234 Sample St<br/>
+                                Dallas , TX, 22222
                             </h6>
                     </div>
                 </div>

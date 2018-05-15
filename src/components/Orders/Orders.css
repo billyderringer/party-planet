@@ -33,16 +33,26 @@ hr {
     background-color: #fff; }
     .orders-container .orders-table td {
       padding: 5px 10px; }
-  .orders-container .order-row:hover {
-    background-color: #d0d0d0; }
-  .orders-container .order-row .order-name {
-    width: 70%; }
-  .orders-container .order-row .view-col {
-    width: 15%; }
-    .orders-container .order-row .view-col .view-btn {
-      color: #fff;
-      background-color: #32bf9c;
-      font-size: .6em; }
+  .orders-container .order-row {
+    padding: 0 10px; }
+    .orders-container .order-row:hover {
+      background-color: #d0d0d0; }
+    .orders-container .order-row .order-name {
+      padding: 10px 0;
+      list-style-type: none; }
+      .orders-container .order-row .order-name .view-btn {
+        background-color: #32bf9c;
+        color: #fff;
+        border-radius: 4px;
+        padding: 3px 5px;
+        font-size: .8em;
+        float: right; }
+    .orders-container .order-row .view-col {
+      width: 15%; }
+      .orders-container .order-row .view-col .view-btn {
+        color: #fff;
+        background-color: #32bf9c;
+        font-size: .6em; }
   .orders-container .orders-view {
     padding: 5px;
     height: 58vh;

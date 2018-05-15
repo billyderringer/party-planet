@@ -16,7 +16,6 @@ const reducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_CUSTOMER' :
             return {
-
                 currentCustomer:{
                     firstName: '',
                     lastName: '',

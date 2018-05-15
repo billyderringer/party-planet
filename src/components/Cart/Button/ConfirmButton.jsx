@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 class ConfirmButton extends Component{
     constructor(props) {
         super(props);
+        this.newRef = React.createRef()
         this.handleClick = this.handleClick.bind(this)
     }
 
@@ -49,7 +50,8 @@ class ConfirmButton extends Component{
             usState : customer.usState,
             zipCode : customer.zipCode,
             order : filteredOrders,
-            total : total
+            total : total,
+            ref : this.newRef
         }
         this.props.addNewCustomer(newCustomer)
         this.props.updateAvailability()
