@@ -62,7 +62,13 @@ hr {
       color: #fff;
       padding: 5px 0; }
     .orders-container .orders-view .return-btn {
-      background-color: #ff0000; }
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin: 5px 0;
+      padding: 5px 10px;
+      font-size: .8em; }
     .orders-container .orders-view .customer-body {
       padding: 10px 10px 0;
       font-size: .7em; }
@@ -81,8 +87,7 @@ hr {
   .orders-container .view-total {
     background-color: #32bf9c;
     color: #fff;
-    width: 50%;
-    margin: 15px 0 0 25%;
+    margin-top: 15px;
     padding: 5px 0; }
 
 /*# sourceMappingURL=Orders.css.map */

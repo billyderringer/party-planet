@@ -43,7 +43,10 @@ class OrderView extends Component {
                             ' ' +
                             order.lastName: 'View Order Here'}</h6>
                     </div>
-
+                    <div className="col-12 text-center">
+                        {runCheck ?
+                            <button className="return-btn">RETURN</button> : ''}
+                    </div>
                     <div className="col-12 customer-body">
                         {orderBody}
                     </div>

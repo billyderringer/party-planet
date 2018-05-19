@@ -49,6 +49,12 @@
     }
     .return-btn{
       background-color: $red;
+      color: $white;
+      border: none;
+      border-radius: 4px;
+      margin: 5px 0;
+      padding: 5px 10px;
+      font-size: .8em;
     }
     .customer-body{
       padding: 10px 10px 0;
@@ -76,8 +82,7 @@
   .view-total{
     background-color: $green;
     color: $white;
-    width: 50%;
-    margin: 15px 0 0 25%;
+    margin-top: 15px;
     padding: 5px 0;
    }
 }
