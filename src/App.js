@@ -24,9 +24,7 @@ class App extends Component {
                         <Cart />
                     </div>
                     <div className="col-md-3 shared-col">
-                        <ul>
-                            <Orders />
-                        </ul>
+                        <Orders />
                     </div>
                 </div>
             </div>

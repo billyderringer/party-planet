@@ -69,6 +69,8 @@ hr {
       margin: 5px 0;
       padding: 5px 10px;
       font-size: .8em; }
+      .orders-container .orders-view .return-btn:hover {
+        cursor: pointer; }
     .orders-container .orders-view .customer-body {
       padding: 10px 10px 0;
       font-size: .7em; }
