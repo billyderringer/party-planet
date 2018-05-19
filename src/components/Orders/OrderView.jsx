@@ -8,10 +8,29 @@ class OrderView extends Component {
         let order = runCheck ? this.props.order[0] : this.props.order
         let orderBody = runCheck ?
             <div>
-                <h6>Email: {order.emailAddress}</h6>
-                <h6>Phone: {order.phoneNumber}</h6>
-                <h6>Address: {order.streetAddress}<br/>
-                    {order.city} , {order.usState} , {order.zipCode}
+                <h6><strong>Email:</strong> {order.emailAddress}</h6>
+                <h6><strong>Phone:</strong> {order.phoneNumber}</h6>
+                <h6><strong>Address:</strong> {order.streetAddress}</h6>
+                <h6><strong>City:</strong> {order.city}</h6>
+                <h6><strong>St:</strong> {order.usState}
+                    <span className="view-zip">
+                        <strong>Zip:</strong> {order.zipCode}
+                    </span>
+                </h6>
+                <h6><strong>Order: </strong></h6>
+                <div className="row view-list">
+                    {order.order.map((item,i) => {
+                        return <div key={i}
+                                    className="col-12 view-list-item">
+                            {item.description}
+                            <span className="list-item-qty text-right">
+                                x {item.needed}
+                            </span>
+                            </div>
+                    })}
+                </div>
+                <h6 className="view-total text-center">
+                    TOTAL: ${parseFloat(order.total).toFixed(2)}
                 </h6>
             </div>
             : ''
@@ -24,6 +43,7 @@ class OrderView extends Component {
                             ' ' +
                             order.lastName: 'View Order Here'}</h6>
                     </div>
+
                     <div className="col-12 customer-body">
                         {orderBody}
                     </div>

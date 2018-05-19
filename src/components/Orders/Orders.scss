@@ -47,9 +47,37 @@
       color: $white;
       padding: 5px 0;
     }
+    .return-btn{
+      background-color: $red;
+    }
     .customer-body{
       padding: 10px 10px 0;
       font-size: .7em;
     }
   }
+  .view-zip{
+    padding-left: 20px;
+  }
+  .view-list {
+    display: block;
+    height: 15vh;
+    overflow-y: auto;
+    .view-list-item {
+      list-style: none;
+      font-size: 1.25em;
+      .list-item-qty{
+        float: right;
+        color: $red;
+      }
+
+    }
+
+  }
+  .view-total{
+    background-color: $green;
+    color: $white;
+    width: 50%;
+    margin: 15px 0 0 25%;
+    padding: 5px 0;
+   }
 }

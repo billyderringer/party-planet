@@ -61,8 +61,28 @@ hr {
       background-color: #32bf9c;
       color: #fff;
       padding: 5px 0; }
+    .orders-container .orders-view .return-btn {
+      background-color: #ff0000; }
     .orders-container .orders-view .customer-body {
       padding: 10px 10px 0;
       font-size: .7em; }
+  .orders-container .view-zip {
+    padding-left: 20px; }
+  .orders-container .view-list {
+    display: block;
+    height: 15vh;
+    overflow-y: auto; }
+    .orders-container .view-list .view-list-item {
+      list-style: none;
+      font-size: 1.25em; }
+      .orders-container .view-list .view-list-item .list-item-qty {
+        float: right;
+        color: #ff0000; }
+  .orders-container .view-total {
+    background-color: #32bf9c;
+    color: #fff;
+    width: 50%;
+    margin: 15px 0 0 25%;
+    padding: 5px 0; }
 
 /*# sourceMappingURL=Orders.css.map */
