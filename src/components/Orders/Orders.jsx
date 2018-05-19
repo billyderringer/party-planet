@@ -2,32 +2,31 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import './Orders.css'
 import OrderView from  './OrderView'
+import ListItem from './ListItem'
+
+let selected
 
 class Orders extends Component {
     constructor(props) {
-        super(props);
+        super(props)
+        this.state={
+            order: 'Click Order to View'
+        }
         this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick = (e) => {
-        console.log(e.target)
+        selected = this.props.orders
+            .filter(item => item.id.toString() === e.target.id)
+        this.setState({order: selected})
     }
 
     render() {
         let orders = this.props.orders.map((item,i) => {
-            return <ul className="order-row"
-                       key={i} >
-                    <li className="order-name">
-                        {item.firstName} {item.lastName}
-                        <span className="view-btn">
-                             <button className="btn view-btn"
-                                     ref={item.description}
-                                     onClick={this.handleClick}
-                             >VIEW
-                        </button>
-                        </span>
-                    </li>
-                </ul>
+            return <ListItem key={i}
+                             handleClick={this.handleClick}
+                             order={item}
+                             id={item.id}/>
         })
         return (
             <div className="col-12 orders-container">
@@ -35,7 +34,7 @@ class Orders extends Component {
                 <div className="orders-table">
                     {orders}
                 </div>
-                <OrderView />
+                <OrderView order={selected} />
             </div>
         )
     }

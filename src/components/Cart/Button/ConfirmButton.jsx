@@ -4,8 +4,10 @@ import {connect} from 'react-redux'
 
 class ConfirmButton extends Component{
     constructor(props) {
-        super(props);
-        this.newRef = React.createRef()
+        super(props)
+        this.state={
+            count : 0
+        }
         this.handleClick = this.handleClick.bind(this)
     }
 
@@ -51,10 +53,11 @@ class ConfirmButton extends Component{
             zipCode : customer.zipCode,
             order : filteredOrders,
             total : total,
-            ref : this.newRef
+            id : this.state.count
         }
         this.props.addNewCustomer(newCustomer)
         this.props.updateAvailability()
+        this.setState({count: (this.state.count +1)})
     }
 
     render() {
