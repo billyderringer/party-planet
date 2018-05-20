@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import './Orders.css'
+import ReturnButton from "../Buttons/ReturnButton";
 
 class OrderView extends Component {
     render() {
@@ -11,11 +12,11 @@ class OrderView extends Component {
                 <h6><strong>Email:</strong> {order.emailAddress}</h6>
                 <h6><strong>Phone:</strong> {order.phoneNumber}</h6>
                 <h6><strong>Address:</strong> {order.streetAddress}</h6>
-                <h6><strong>City:</strong> {order.city}</h6>
-                <h6><strong>St:</strong> {order.usState}
-                    <span className="view-zip">
-                        <strong>Zip:</strong> {order.zipCode}
+                <h6><strong>City:</strong> {order.city}
+                    <span className="view-state">
+                         <strong>St:</strong> {order.usState}
                     </span>
+                    <strong>Zip:</strong> {order.zipCode}
                 </h6>
                 <h6><strong>Order: </strong></h6>
                 <div className="row view-list">
@@ -45,7 +46,7 @@ class OrderView extends Component {
                     </div>
                     <div className="col-12 text-center">
                         {runCheck ?
-                            <button className="return-btn">RETURN</button> : ''}
+                            <ReturnButton /> : ''}
                     </div>
                     <div className="col-12 customer-body">
                         {orderBody}

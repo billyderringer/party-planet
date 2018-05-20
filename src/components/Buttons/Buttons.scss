@@ -1,0 +1,23 @@
+@import "../shared";
+
+.cancel-btn{
+  background-color: $red;
+  margin-right: 20px;
+}
+.save-btn{
+  background-color: $green;
+  margin-left: 20px;
+}
+
+.return-btn{
+  background-color: $red;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: .8em;
+  &:hover{
+    cursor: pointer;
+  }
+}

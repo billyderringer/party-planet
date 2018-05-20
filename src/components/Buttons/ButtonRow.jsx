@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../Cart.css'
+import '../Cart/Cart.css'
 import CancelButton from "./CancelButton";
 import ConfirmButton from "./ConfirmButton";
 

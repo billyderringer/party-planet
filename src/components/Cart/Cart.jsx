@@ -5,7 +5,7 @@ import InventoryList from './InventoryList'
 import CustomerSummary from './CustomerSummary'
 import DateSummary from "../Customer/DateSummary";
 import CostSummary from "./CostSummary";
-import ButtonRow from './Button/ButtonRow'
+import ButtonRow from '../Buttons/ButtonRow'
 
 function Cart(props) {
     return (

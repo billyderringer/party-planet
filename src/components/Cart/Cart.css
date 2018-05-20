@@ -63,12 +63,6 @@ hr {
       font-size: .8em; }
       .cart-container .btn-row .cart-btn:hover {
         cursor: pointer; }
-    .cart-container .btn-row .cancel-btn {
-      background-color: #ff0000;
-      margin-right: 20px; }
-    .cart-container .btn-row .save-btn {
-      background-color: #32bf9c;
-      margin-left: 20px; }
   .cart-container .inventory-header {
     padding: 5px 0;
     background-color: #32bf9c; }

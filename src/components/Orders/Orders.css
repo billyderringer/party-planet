@@ -61,21 +61,11 @@ hr {
       background-color: #32bf9c;
       color: #fff;
       padding: 5px 0; }
-    .orders-container .orders-view .return-btn {
-      background-color: #ff0000;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      margin: 5px 0;
-      padding: 5px 10px;
-      font-size: .8em; }
-      .orders-container .orders-view .return-btn:hover {
-        cursor: pointer; }
     .orders-container .orders-view .customer-body {
       padding: 10px 10px 0;
       font-size: .7em; }
-  .orders-container .view-zip {
-    padding-left: 20px; }
+  .orders-container .view-state {
+    padding: 0 20px; }
   .orders-container .view-list {
     display: block;
     height: 15vh;
