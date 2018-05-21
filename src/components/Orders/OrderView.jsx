@@ -5,7 +5,7 @@ import ReturnButton from "../Buttons/ReturnButton";
 
 class OrderView extends Component {
     render() {
-        let runCheck = this.props.order !== undefined
+        let runCheck = this.props.order !== undefined && this.props.order !== ''
         let order = runCheck ? this.props.order[0] : this.props.order
         let orderBody = runCheck ?
             <div>
@@ -46,7 +46,9 @@ class OrderView extends Component {
                     </div>
                     <div className="col-12 text-center">
                         {runCheck ?
-                            <ReturnButton /> : ''}
+                            <ReturnButton
+                                reset={this.props.reset}
+                                order={order} /> : ''}
                     </div>
                     <div className="col-12 customer-body">
                         {orderBody}

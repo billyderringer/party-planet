@@ -7,11 +7,11 @@ const actions = {
     updateCustomerProperty: (name,value) => {
         return { type: constants.UPDATE_CUSTOMER_PROPERTY, name,value }
     },
-    setCurrentCustomer: (currentCustomer) => {
-        return {
-            type: constants.SET_CURRENT_CUSTOMER,
-            currentCustomer
-        }
+    archiveCustomer: (archiveCustomer) => {
+        return { type: constants.SET_CURRENT_CUSTOMER, archiveCustomer }
+    },
+    updateCustomers: (currentCustomer) => {
+        return { type: constants.REMOVE_CUSTOMER, currentCustomer }
     }
 }
 

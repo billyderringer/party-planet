@@ -9,13 +9,15 @@ const initialState = {
         usState: '',
         zipCode: ''
     },
-    customers:[]
+    customers:[],
+    archivedCustomers:[]
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_CUSTOMER' :
             return {
+                ...state,
                 currentCustomer:{
                     firstName: '',
                     lastName: '',
@@ -38,6 +40,21 @@ const reducer = (state = initialState, action) => {
                     ...state.currentCustomer,
                     [action.property]:action.value
                 }
+            }
+        case 'ARCHIVE_CUSTOMER':
+            return {
+                ...state,
+                archivedCustomers: [
+                    ...state.archivedCustomers,
+                    action.archivedCustomer
+                ]
+            }
+        case 'REMOVE_CUSTOMER':
+            let customerArray = state.customers
+                .filter(customer => action.currentCustomer.id !== customer.id)
+            return{
+                ...state,
+                customers : customerArray
             }
         default:
             return state

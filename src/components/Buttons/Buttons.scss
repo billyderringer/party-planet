@@ -1,14 +1,18 @@
 @import "../shared";
 
+//cancel
 .cancel-btn{
   background-color: $red;
   margin-right: 20px;
 }
+
+//save
 .save-btn{
   background-color: $green;
   margin-left: 20px;
 }
 
+//return
 .return-btn{
   background-color: $red;
   color: $white;

@@ -13,7 +13,13 @@ class Orders extends Component {
             order: 'Click Order to View'
         }
         this.handleClick = this.handleClick.bind(this)
+        this.resetSelected = this.resetSelected.bind(this)
     }
+
+    resetSelected = () => {
+        selected = ''
+    }
+
 
     handleClick = (e) => {
         selected = this.props.orders
@@ -34,7 +40,9 @@ class Orders extends Component {
                 <div className="orders-table">
                     {orders}
                 </div>
-                <OrderView order={selected} />
+                <OrderView
+                    reset={this.resetSelected}
+                    order={selected} />
             </div>
         )
     }
@@ -46,13 +54,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return{
-        setCurrentCustomer:(currentCustomer) => {
-            const action = {type: 'GET_CUSTOMER', currentCustomer}
-            dispatch(action)
-        }
-    }
-}
-
-export default connect (mapStateToProps, mapDispatchToProps)(Orders)
+export default connect (mapStateToProps)(Orders)

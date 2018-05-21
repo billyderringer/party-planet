@@ -6,6 +6,9 @@ const actions = {
     },
     updateAvailability: () => {
         return { type: constants.UPDATE_AVAILABILITY }
+    },
+    returnItems: (itemArray) => {
+        return { type: constants.UPDATE_AVAILABILITY, itemArray }
     }
 }
 
