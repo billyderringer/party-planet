@@ -51,7 +51,8 @@ const reducer = (state = initialState, action) => {
             }
         case 'REMOVE_CUSTOMER':
             let customerArray = state.customers
-                .filter(customer => action.currentCustomer.id !== customer.id)
+                .filter(customer =>
+                    action.currentCustomer.id !== customer.id)
             return{
                 ...state,
                 customers : customerArray

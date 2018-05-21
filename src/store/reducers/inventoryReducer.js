@@ -129,7 +129,7 @@ const reducer = (state = initialState, action) => {
                 [id]:inventory,
                 subtotal: subtotal
             }
-        case  'UPDATE_AVAILABILITY':
+        case 'UPDATE_AVAILABILITY':
             const bounce = state.bounce.map(item => {
                 return {
                     ...item,
@@ -169,6 +169,55 @@ const reducer = (state = initialState, action) => {
                 chairs,
                 tables,
                 misc
+            }
+        case 'RETURN_ITEMS':
+            let checkedItem
+            const bounceReturned = state.bounce.map(stateItem => {
+
+                action.itemArray.map(item => {
+                    if (item.description === stateItem.description){
+                      stateItem.available = stateItem.available + item.needed
+                    }
+                    return checkedItem = stateItem
+                })
+                return { ...checkedItem }
+            })
+            const chairsReturned = state.chairs.map(stateItem => {
+
+                action.itemArray.map(item => {
+                    if (item.description === stateItem.description){
+                       stateItem.available = stateItem.available + item.needed
+                    }
+                    return checkedItem = stateItem
+                })
+                return { ...checkedItem }
+            })
+            const tablesReturned = state.tables.map(stateItem => {
+
+                action.itemArray.map(item => {
+                    if (item.description === stateItem.description){
+                        stateItem.available = stateItem.available + item.needed
+                    }
+                    return checkedItem = stateItem
+                })
+                return { ...checkedItem }
+            })
+            const miscReturned = state.misc.map(stateItem => {
+
+                action.itemArray.map(item => {
+                    if (item.description === stateItem.description){
+                        stateItem.available = stateItem.available + item.needed
+                    }
+                    return checkedItem = stateItem
+                })
+                return { ...checkedItem }
+            })
+            return{
+                ...(state),
+                bounce: bounceReturned,
+                chairs: chairsReturned,
+                tables: tablesReturned,
+                misc: miscReturned
             }
         default:
             return state
