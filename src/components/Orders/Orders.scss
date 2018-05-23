@@ -1,45 +1,57 @@
 @import "../shared";
 
 .orders-container{
-  padding: 10px;
-  .orders-table{
-    height: 30vh;
-    overflow: auto;
+  padding: 5px;
+  //orders-list
+  .orders-list{
+    height: 23vh;
     outline: 1px solid $lightGrey;
     background-color: $white;
-    td{
-      padding: 5px 10px;
+    padding: 5px;
+    .orders-header{
+      background-color: $green;
+      color: $white;
+      height: 5vh;
+      padding: 5px 0;
+    }
+    .orders-table{
+      height: 18vh;
+      overflow: auto;
+      td{
+        padding: 5px 10px;
+      }
+    }
+
+    .order-name{
+      padding: 10px;
+      list-style-type: none;
+      &:hover{
+        background-color: $lightGrey;
+      }
+      .view-btn{
+        background-color: $green;
+        color: $white;
+        border-radius: 4px;
+        padding: 3px 5px;
+        font-size: .8em;
+        float: right;
+      }
+    }
+    .view-col{
+      width: 15%;
+      .view-btn{
+        color: $white;
+        background-color: $green;
+        font-size: .6em;
+      }
     }
   }
 
-  .order-name{
-    padding: 10px;
-    list-style-type: none;
-    &:hover{
-      background-color: $lightGrey;
-    }
-    .view-btn{
-      background-color: $green;
-      color: $white;
-      border-radius: 4px;
-      padding: 3px 5px;
-      font-size: .8em;
-      float: right;
-    }
-  }
-  .view-col{
-    width: 15%;
-    .view-btn{
-      color: $white;
-      background-color: $green;
-      font-size: .6em;
-    }
-  }
-
+  //order-view
   .orders-view{
     padding: 5px;
-    height: 58vh;
-    margin-top: 1vh;
+    height: 70vh;
+    margin: 5px 0;
     outline: 1px solid $lightGrey;
     background-color: $white;
     .customer-header{
@@ -51,29 +63,27 @@
       padding: 10px 10px 0;
       font-size: .7em;
     }
-  }
-  .view-state{
-    padding: 0 20px;
-  }
-  .view-list {
-    display: block;
-    height: 15vh;
-    overflow-y: auto;
-    .view-list-item {
-      list-style: none;
-      font-size: 1.25em;
-      .list-item-qty{
-        float: right;
-        color: $red;
+    .view-list {
+      display: block;
+      height: 25vh;
+      overflow-y: auto;
+      .view-list-item {
+        list-style: none;
+        font-size: 1.25em;
+        .list-item-qty{
+          float: right;
+          color: $red;
+        }
       }
-
     }
-
+    .return-btn{
+      font-size: 1em;
+    }
+    .view-total{
+      background-color: $green;
+      color: $white;
+      margin-top: 15px;
+      padding: 5px 0;
+    }
   }
-  .view-total{
-    background-color: $green;
-    color: $white;
-    margin-top: 15px;
-    padding: 5px 0;
-   }
 }

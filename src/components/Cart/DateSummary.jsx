@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../Cart/Cart.css'
+import './Cart.css'
 
 class DateSummary extends Component{
     render() {

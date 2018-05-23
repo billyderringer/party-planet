@@ -20,7 +20,6 @@ class Orders extends Component {
         selected = ''
     }
 
-
     handleClick = (e) => {
         selected = this.props.orders
             .filter(item => item.id.toString() === e.target.id)
@@ -36,9 +35,13 @@ class Orders extends Component {
         })
         return (
             <div className="col-12 orders-container">
-                <h2><strong>Orders</strong></h2>
-                <div className="orders-table">
-                    {orders}
+                <div className="orders-list">
+                    <div className="text-center orders-header">
+                        <h6>Orders</h6>
+                    </div>
+                    <div className="orders-table">
+                        {orders}
+                    </div>
                 </div>
                 <OrderView
                     reset={this.resetSelected}

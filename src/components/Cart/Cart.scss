@@ -1,72 +1,85 @@
 @import "../shared";
 
 .cart-container{
-  height: 100vh;
-  background-color: $darkGrey;
   color: $white;
-  .cart-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    background-color: $green;
-  }
-  hr{
-    width: 90%;
-    margin: 10px 0 10px 5%;
+  margin: 5px;
+
+  //details
+  .details-container{
     background-color: $darkGrey;
-  }
-  .customer-summary{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p{
-      font-size: 1em;
-    }
-  }
-  .time-summary{
-    width: 100%;
-  }
-  .cost-summary{
-    font-size: 1.2em;
-  }
-  .btn-row{
-    width: 100%;
-    margin: 10px 0;
-    .btn-col{
+    height: 70vh;
+    .cart-header{
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      height: 5vh;
+      background-color: $green;
     }
-    .cart-btn{
-      color: $white;
-      border: none;
-      border-radius: 4px;
-      padding: 5px 10px;
-      font-size: .8em;
-      &:hover{
-        cursor: pointer;
+    hr{
+      width: 90%;
+      margin: 10px 0 10px 5%;
+      background-color: $darkGrey;
+    }
+    .customer-summary{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p{
+        font-size: 1em;
+      }
+    }
+    .time-summary{
+      width: 100%;
+    }
+    .cost-summary{
+      font-size: 1.2em;
+    }
+    .btn-row{
+      width: 100%;
+      margin: 10px 0;
+      .btn-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .cart-btn{
+        color: $white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: .8em;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
-  .inventory-header{
-    padding: 5px 0;
-    background-color: $green;
-  }
-  .inventory-list{
-    overflow-y: auto;
-    height: 30vh;
+
+  //order
+  .current-order{
+    margin: 5px 0;
     outline: 1px solid $lightGrey;
-    color: $black;
     background-color: $white;
-    th{
-      border: none;
+    .order-header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 5vh;
+      background-color: $green;
     }
-    .summary-description{
-      width: 90%;
-    }
-    .summary-qty{
-      width: 10%;
+    .order-list{
+      height: 18vh;
+      overflow-y: auto;
+      color: $black;
+      th{
+        border: none;
+      }
+      .summary-description{
+        width: 90%;
+      }
+      .summary-qty{
+        width: 10%;
+      }
     }
   }
 }

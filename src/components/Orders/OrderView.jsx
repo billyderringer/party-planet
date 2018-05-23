@@ -12,11 +12,13 @@ class OrderView extends Component {
                 <h6><strong>Email:</strong> {order.emailAddress}</h6>
                 <h6><strong>Phone:</strong> {order.phoneNumber}</h6>
                 <h6><strong>Address:</strong> {order.streetAddress}</h6>
-                <h6><strong>City:</strong> {order.city}
-                    <span className="view-state">
+                <h6><strong>City:</strong> {order.city}</h6>
+                <h6><span className="view-state">
                          <strong>St:</strong> {order.usState}
                     </span>
-                    <strong>Zip:</strong> {order.zipCode}
+                </h6>
+                <h6><strong>Zip:</strong>
+                    {order.zipCode}
                 </h6>
                 <h6><strong>Order: </strong></h6>
                 <div className="row view-list">
@@ -29,6 +31,12 @@ class OrderView extends Component {
                             </span>
                             </div>
                     })}
+                </div>
+                <div className="col-12 text-center">
+                    {runCheck ?
+                        <ReturnButton
+                            reset={this.props.reset}
+                            order={order} /> : ''}
                 </div>
                 <h6 className="view-total text-center">
                     TOTAL: ${parseFloat(order.total).toFixed(2)}
@@ -43,12 +51,6 @@ class OrderView extends Component {
                             order.firstName +
                             ' ' +
                             order.lastName: 'View Order Here'}</h6>
-                    </div>
-                    <div className="col-12 text-center">
-                        {runCheck ?
-                            <ReturnButton
-                                reset={this.props.reset}
-                                order={order} /> : ''}
                     </div>
                     <div className="col-12 customer-body">
                         {orderBody}
