@@ -74,7 +74,7 @@ hr {
       font-size: .7em; }
     .orders-container .orders-view .view-list {
       display: block;
-      height: 25vh;
+      height: 20vh;
       overflow-y: auto; }
       .orders-container .orders-view .view-list .view-list-item {
         list-style: none;

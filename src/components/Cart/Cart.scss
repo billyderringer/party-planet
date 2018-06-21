@@ -2,11 +2,12 @@
 
 .cart-container{
   color: $white;
-  margin: 5px;
+  margin: 5px 0 5px 5px;
 
   //details
   .details-container{
     background-color: $darkGrey;
+    outline: 1px solid $lightGrey;
     height: 70vh;
     .cart-header{
       display: flex;

@@ -17,7 +17,6 @@ class ReturnButton extends Component{
         //return items to inventory
         //create array of items
         let itemArray = this.props.order.order
-        console.log(itemArray)
         this.props.returnItems(itemArray)
 
         //remove current customer from array

@@ -10,16 +10,16 @@ function CostSummary(props){
     return (
         <React.Fragment>
             <div className="col-8 out-title">
-                <h3>Subtotal:</h3>
+                <h6>Subtotal:</h6>
             </div>
             <div className="col-4 current-out">
-                <h3>$ {parseFloat(subtotal).toFixed(2)}</h3>
+                <h6>$ {parseFloat(subtotal).toFixed(2)}</h6>
             </div>
             <div className="col-8 in-title">
-                <h3>Tax({taxRate * 100}%):</h3>
+                <h6>Tax({taxRate * 100}%):</h6>
             </div>
             <div className="col-4 current-in">
-                <h3>$ {parseFloat(tax).toFixed(2)}</h3>
+                <h6>$ {parseFloat(tax).toFixed(2)}</h6>
             </div>
             <hr />
             <div className="col-8 total-row">

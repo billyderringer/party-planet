@@ -2,6 +2,7 @@
 
 .orders-container{
   padding: 5px;
+
   //orders-list
   .orders-list{
     height: 23vh;
@@ -65,7 +66,7 @@
     }
     .view-list {
       display: block;
-      height: 25vh;
+      height: 20vh;
       overflow-y: auto;
       .view-list-item {
         list-style: none;

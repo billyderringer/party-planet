@@ -26,9 +26,10 @@ hr {
 
 .cart-container {
   color: #fff;
-  margin: 5px; }
+  margin: 5px 0 5px 5px; }
   .cart-container .details-container {
     background-color: #3e3e3e;
+    outline: 1px solid #d0d0d0;
     height: 70vh; }
     .cart-container .details-container .cart-header {
       display: flex;
